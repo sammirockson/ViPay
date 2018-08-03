@@ -1,0 +1,6 @@
+framework module Pods_ViPayTests {
+  umbrella header "Pods-ViPayTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
