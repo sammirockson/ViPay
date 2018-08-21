@@ -1,0 +1,2241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="cryptowallet/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.4.1" build-num="9F2000"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName">
+        <source>Noomi-Test</source>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSCameraUsageDescription">
+        <source>Enable Noomi scan QRCode</source>
+        <note>Privacy - Camera Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSContactsUsageDescription">
+        <source>Access your contacts to show you friends who are already on this App.</source>
+        <note>Privacy - Contacts Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSLocationWhenInUseUsageDescription">
+        <source>Predict your country code</source>
+        <note>Privacy - Location When In Use Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSPhotoLibraryUsageDescription">
+        <source>Access and select photo for your profile</source>
+        <note>Privacy - Photo Library Usage Description</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="cryptowallet/en.lproj/Localizable.strings" datatype="plaintext" source-language="en">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.4.1" build-num="9F2000"/>
+    </header>
+    <body>
+      <trans-unit id=" (coming soon)">
+        <source> (coming soon)</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" Address">
+        <source> Address</source>
+        <note>Crypto wallet address</note>
+      </trans-unit>
+      <trans-unit id=" Requests">
+        <source> Requests</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" We require your phone number to ensure your  account is  secure. You will receive an sms message  anytime a new  device is used to login.">
+        <source> We require your phone number to ensure your  account is  secure. You will receive an sms message  anytime a new  device is used to login.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" You">
+        <source> You</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" and verify your account. ">
+        <source> and verify your account. </source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" sent">
+        <source> sent</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" sent ">
+        <source> sent </source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="$">
+        <source>$</source>
+        <note>Local currency symbol
+   Local currency symbol. $ for Dollars
+   Local currency symbol. E.g $ for Dollars</note>
+      </trans-unit>
+      <trans-unit id="%.f days ago">
+        <source>%.f days ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f hours ago">
+        <source>%.f hours ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f minutes ago">
+        <source>%.f minutes ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f months ago">
+        <source>%.f months ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f seconds ago">
+        <source>%.f seconds ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f weeks ago">
+        <source>%.f weeks ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f years ago">
+        <source>%.f years ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="*Optional">
+        <source>*Optional</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="1 minute ago">
+        <source>1 minute ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="2 Factor Authentication">
+        <source>2 Factor Authentication</source>
+        <note>SMS confirmation title</note>
+      </trans-unit>
+      <trans-unit id="6 Digit code expected">
+        <source>6 Digit code expected</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Access Contacts">
+        <source>Access Contacts</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add All As Friends">
+        <source>Add All As Friends</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add Friends">
+        <source>Add Friends</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add a Note (Optional)">
+        <source>Add a Note (Optional)</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add as Friend">
+        <source>Add as Friend</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Address">
+        <source>Address</source>
+        <note>Crypto wallet address</note>
+      </trans-unit>
+      <trans-unit id="All Wallets">
+        <source>All Wallets</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Already have an account? Login">
+        <source>Already have an account? Login</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Amount">
+        <source>Amount</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Amount cannot be 0">
+        <source>Amount cannot be 0</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Amount field is empty">
+        <source>Amount field is empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Apt, Unit, or Suite Number">
+        <source>Apt, Unit, or Suite Number</source>
+        <note>Apartment, Unit or Suite Number</note>
+      </trans-unit>
+      <trans-unit id="Are you sure you want to decline this request?">
+        <source>Are you sure you want to decline this request?</source>
+        <note>Confirmation if the user wants to cancel the requests</note>
+      </trans-unit>
+      <trans-unit id="Are you sure you would like to pay">
+        <source>Are you sure you would like to pay</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Authenticating...">
+        <source>Authenticating...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="BTC">
+        <source>BTC</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Balance:">
+        <source>Balance:</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="By signing up, you are agreeing to Hedges \nTerms of Use and Privacy Policy.">
+        <source>By signing up, you are agreeing to Hedges \nTerms of Use and Privacy Policy.</source>
+        <note>Sign Up information</note>
+      </trans-unit>
+      <trans-unit id="By signing up, you are agreeing to Noomi's">
+        <source>By signing up, you are agreeing to Noomi's</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="CONTINUE WITH">
+        <source>CONTINUE WITH</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Camera access is denied">
+        <source>Camera access is denied</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Cancel">
+        <source>Cancel</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Cancel Request">
+        <source>Cancel Request</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Change">
+        <source>Change</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Change PIN">
+        <source>Change PIN</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Choose">
+        <source>Choose</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Choose a name that will help you distinguish this address from other ones in your account.">
+        <source>Choose a name that will help you distinguish this address from other ones in your account.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="City">
+        <source>City</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Coins are better with friends!">
+        <source>Coins are better with friends!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Comment">
+        <source>Comment</source>
+        <note>Comments button title</note>
+      </trans-unit>
+      <trans-unit id="Confirm New Password">
+        <source>Confirm New Password</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Confirm Password field cannot be empty">
+        <source>Confirm Password field cannot be empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Confirm Request">
+        <source>Confirm Request</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Confirm Sending">
+        <source>Confirm Sending</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Confirmation Code">
+        <source>Confirmation Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Confirmation field empty">
+        <source>Confirmation field empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Congratulations on setting up your Noomi Wallet! Add crypto now to start seeing your returns.">
+        <source>Congratulations on setting up your Noomi Wallet! Add crypto now to start seeing your returns.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Contacts">
+        <source>Contacts</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Continue">
+        <source>Continue</source>
+        <note>Continue to the next page</note>
+      </trans-unit>
+      <trans-unit id="Continue with Facebook">
+        <source>Continue with Facebook</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Copied">
+        <source>Copied</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Copy Wallet Address">
+        <source>Copy Wallet Address</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Country">
+        <source>Country</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Create New Address (Coming soon)">
+        <source>Create New Address (Coming soon)</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Create New Password">
+        <source>Create New Password</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Creating New Password...">
+        <source>Creating New Password...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Creating additional addresses can help make transactions more private when sending coins outside of Noomi Wallet.">
+        <source>Creating additional addresses can help make transactions more private when sending coins outside of Noomi Wallet.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Date of Birth">
+        <source>Date of Birth</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Decline">
+        <source>Decline</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Decline Request">
+        <source>Decline Request</source>
+        <note>Decline the request the user has sent</note>
+      </trans-unit>
+      <trans-unit id="Declining...">
+        <source>Declining...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Didn’t receive it? Tap Here to Resend">
+        <source>Didn’t receive it? Tap Here to Resend</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Done">
+        <source>Done</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Don’t have an account? Sign Up">
+        <source>Don’t have an account? Sign Up</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Double check your phone number">
+        <source>Double check your phone number</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Earn more with professionally-managed investing.">
+        <source>Earn more with professionally-managed investing.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Easily track and store all your cryptocurrencies.">
+        <source>Easily track and store all your cryptocurrencies.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Edit">
+        <source>Edit</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Email">
+        <source>Email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Email field cannot be empty">
+        <source>Email field cannot be empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Email field empty">
+        <source>Email field empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter Amount to Request">
+        <source>Enter Amount to Request</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter Amount to Send">
+        <source>Enter Amount to Send</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter Code">
+        <source>Enter Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter a new password to use with your account.">
+        <source>Enter a new password to use with your account.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter an amount">
+        <source>Enter an amount</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter the code you received">
+        <source>Enter the code you received</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter the code you received via email to change your password.">
+        <source>Enter the code you received via email to change your password.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter your email address and we will send you a code to reset your password.">
+        <source>Enter your email address and we will send you a code to reset your password.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Facebook">
+        <source>Facebook</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Fast">
+        <source>Fast</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Financial Regulations require that we collect this information to verify your identity.">
+        <source>Financial Regulations require that we collect this information to verify your identity.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Find Friends (Coming soon)">
+        <source>Find Friends (Coming soon)</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="First Name">
+        <source>First Name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="First Name field empty">
+        <source>First Name field empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="First Name is too short">
+        <source>First Name is too short</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Forgot Password">
+        <source>Forgot Password</source>
+        <note>Forgot password notice</note>
+      </trans-unit>
+      <trans-unit id="Friend">
+        <source>Friend</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Friends">
+        <source>Friends</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Hold to Confirm">
+        <source>Hold to Confirm</source>
+        <note>Hold to confirm</note>
+      </trans-unit>
+      <trans-unit id="Hold to \nConfirm">
+        <source>Hold to \nConfirm</source>
+        <note>Hold to Confirm. User should tap down the button to send or request funds</note>
+      </trans-unit>
+      <trans-unit id="IMPORTANT">
+        <source>IMPORTANT</source>
+        <note>Import information</note>
+      </trans-unit>
+      <trans-unit id="Instantly transfer cryptocurrency to friends.">
+        <source>Instantly transfer cryptocurrency to friends.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid Address">
+        <source>Invalid Address</source>
+        <note>Alert message for invalid Cybermiles/Ethereum address</note>
+      </trans-unit>
+      <trans-unit id="Invalid Email">
+        <source>Invalid Email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid Email Address">
+        <source>Invalid Email Address</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid amount entered">
+        <source>Invalid amount entered</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid email">
+        <source>Invalid email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Last Name">
+        <source>Last Name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Last Name field empty">
+        <source>Last Name field empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Last Name is too short">
+        <source>Last Name is too short</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Let us access your contacts so that you send crypto to your friends!">
+        <source>Let us access your contacts so that you send crypto to your friends!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Like">
+        <source>Like</source>
+        <note>Likes button title</note>
+      </trans-unit>
+      <trans-unit id="Loading ...">
+        <source>Loading ...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Logging in...">
+        <source>Logging in...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Login">
+        <source>Login</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Make sure the address you enter is correct and of the same type of coin that you are sending. Errors will result in the coins being sent to the incorrect address.">
+        <source>Make sure the address you enter is correct and of the same type of coin that you are sending. Errors will result in the coins being sent to the incorrect address.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Maximum on-chain transfer amount is currently set at 15 ETH.">
+        <source>Maximum on-chain transfer amount is currently set at 15 ETH.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Maximum on-chain transfer amount is currently set at 50,000 CMT.">
+        <source>Maximum on-chain transfer amount is currently set at 50,000 CMT.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="More Wallets Coming Soon">
+        <source>More Wallets Coming Soon</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="My Transactions">
+        <source>My Transactions</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="My Wallets">
+        <source>My Wallets</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Nationality">
+        <source>Nationality</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Network Issues - Transaction Will Be Sent Later">
+        <source>Network Issues - Transaction Will Be Sent Later</source>
+        <note>Alert for delay response from server(Backend)</note>
+      </trans-unit>
+      <trans-unit id="New Password">
+        <source>New Password</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="New Password field cannot be empty">
+        <source>New Password field cannot be empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Next">
+        <source>Next</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="No Upper case letter">
+        <source>No Upper case letter</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Not Right Now">
+        <source>Not Right Now</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Note ">
+        <source>Note </source>
+        <note>Note is for the caption the user added to the transfer</note>
+      </trans-unit>
+      <trans-unit id="Note: Only send">
+        <source>Note: Only send</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Note: Only send \(accountName) (\(coinName)) to this address. Other types of cryptocurrency will be sent elsewhere and lost forever.">
+        <source>Note: Only send \(accountName) (\(coinName)) to this address. Other types of cryptocurrency will be sent elsewhere and lost forever.</source>
+        <note>Ignore the account name and coin name in the brackets.</note>
+      </trans-unit>
+      <trans-unit id="OR USE YOUR EMAIL">
+        <source>OR USE YOUR EMAIL</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Other People on Noomi">
+        <source>Other People on Noomi</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password">
+        <source>Password</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password field cannot be empty">
+        <source>Password field cannot be empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password field empty">
+        <source>Password field empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password is too short">
+        <source>Password is too short</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password must be at least 8 characters long and contain 1 uppercase, 1 lowercase,  and 1 symbol or number.">
+        <source>Password must be at least 8 characters long and contain 1 uppercase, 1 lowercase,  and 1 symbol or number.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password reset successful">
+        <source>Password reset successful</source>
+        <note>Alert: Successful password reset</note>
+      </trans-unit>
+      <trans-unit id="Password short">
+        <source>Password short</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password too short">
+        <source>Password too short</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password updated successfully">
+        <source>Password updated successfully</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Passwords don't match">
+        <source>Passwords don't match</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Passwords must contain 1 lowercase letter">
+        <source>Passwords must contain 1 lowercase letter</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Passwords must contain 1 symbol or 1 number">
+        <source>Passwords must contain 1 symbol or 1 number</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Pay">
+        <source>Pay</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Paying...">
+        <source>Paying...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Pending">
+        <source>Pending</source>
+        <note>Title for Pending requests</note>
+      </trans-unit>
+      <trans-unit id="Phone Number">
+        <source>Phone Number</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Phone number field is empty">
+        <source>Phone number field is empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please Enter First Name">
+        <source>Please Enter First Name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please Enter Last Name">
+        <source>Please Enter Last Name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please check your email">
+        <source>Please check your email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please check your inbox for a new verification email.">
+        <source>Please check your inbox for a new verification email.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please confirm the email below and we will send you a code to change your PIN.">
+        <source>Please confirm the email below and we will send you a code to change your PIN.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Privacy">
+        <source>Privacy</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Privacy policy">
+        <source>Privacy policy</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Private">
+        <source>Private</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Processing">
+        <source>Processing</source>
+        <note>Activity in progress</note>
+      </trans-unit>
+      <trans-unit id="Public">
+        <source>Public</source>
+        <note>Privacy status. Private,Public or Friends only</note>
+      </trans-unit>
+      <trans-unit id="Pull down to refresh">
+        <source>Pull down to refresh</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Receiver Address field is empty">
+        <source>Receiver Address field is empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Receiver field cannot be empty">
+        <source>Receiver field cannot be empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Receiver’s Address">
+        <source>Receiver’s Address</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Refer and Get Free Crypto!">
+        <source>Refer and Get Free Crypto!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Referral Code">
+        <source>Referral Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Release to refresh">
+        <source>Release to refresh</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request">
+        <source>Request</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request Details">
+        <source>Request Details</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request From">
+        <source>Request From</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request Payment">
+        <source>Request Payment</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request from Friends">
+        <source>Request from Friends</source>
+        <note>Title for request token</note>
+      </trans-unit>
+      <trans-unit id="Request title">
+        <source>Request title</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request to">
+        <source>Request to</source>
+        <note>Referring to a user that's being requested to</note>
+      </trans-unit>
+      <trans-unit id="Requests are only visible  to the sender and recipient.">
+        <source>Requests are only visible  to the sender and recipient.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="SMS Code has been sent successfully">
+        <source>SMS Code has been sent successfully</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="STRONG">
+        <source>STRONG</source>
+        <note>Strong password</note>
+      </trans-unit>
+      <trans-unit id="Safe">
+        <source>Safe</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Save">
+        <source>Save</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Search">
+        <source>Search</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Search by name, username, email">
+        <source>Search by name, username, email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Select Date of Birth">
+        <source>Select Date of Birth</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Send">
+        <source>Send</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Send Code">
+        <source>Send Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Send To">
+        <source>Send To</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Send to">
+        <source>Send to</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Send to Address">
+        <source>Send to Address</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sending code...">
+        <source>Sending code...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Settings">
+        <source>Settings</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Share">
+        <source>Share</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Show My Address">
+        <source>Show My Address</source>
+        <note>Show My Crypto Wallet Address</note>
+      </trans-unit>
+      <trans-unit id="Sign Up">
+        <source>Sign Up</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sign in with Google">
+        <source>Sign in with Google</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Signing Up...">
+        <source>Signing Up...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Skip">
+        <source>Skip</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Slow">
+        <source>Slow</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sorry this transaction is completed.">
+        <source>Sorry this transaction is completed.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sorry you do not have sufficient funds to complete this payment">
+        <source>Sorry you do not have sufficient funds to complete this payment</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sorry you do not have sufficient funds to complete this payment.">
+        <source>Sorry you do not have sufficient funds to complete this payment.</source>
+        <note>Alert for insufficient funds
+   Alert message for insufficient funds</note>
+      </trans-unit>
+      <trans-unit id="Speed">
+        <source>Speed</source>
+        <note>Fast or slow for the gateway to process the transaction onto the blockchain</note>
+      </trans-unit>
+      <trans-unit id="Sponsored Wallets">
+        <source>Sponsored Wallets</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="State">
+        <source>State</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Stay on top of the latest crypto trends.">
+        <source>Stay on top of the latest crypto trends.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Street Address">
+        <source>Street Address</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Symbol detected. \(char) is not allowed">
+        <source>Symbol detected. \(char) is not allowed</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Tap the button below to find your friends on Noomi.">
+        <source>Tap the button below to find your friends on Noomi.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Tap to Resend Email">
+        <source>Tap to Resend Email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Terms of use">
+        <source>Terms of use</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="The network is experiencing some issues. Please try again later.">
+        <source>The network is experiencing some issues. Please try again later.</source>
+        <note>Alert message for failed request</note>
+      </trans-unit>
+      <trans-unit id="This request has already been declined.">
+        <source>This request has already been declined.</source>
+        <note>Alert message for request that has been paid already</note>
+      </trans-unit>
+      <trans-unit id="This request has already been paid.">
+        <source>This request has already been paid.</source>
+        <note>Alert message for request that has been declined already</note>
+      </trans-unit>
+      <trans-unit id="This request has been cancelled by the other person">
+        <source>This request has been cancelled by the other person</source>
+        <note>Alert message for cancelled request</note>
+      </trans-unit>
+      <trans-unit id="This request has been cancelled by the other person.">
+        <source>This request has been cancelled by the other person.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Total Wallets Balance">
+        <source>Total Wallets Balance</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="USD">
+        <source>USD</source>
+        <note>Abbreviation for local currency. E.g USD for United States Dollars
+   Abbreviation for local currency. USD for United States Dollars
+   Abbreviation for the local currency. USD for United States Dollars</note>
+      </trans-unit>
+      <trans-unit id="Unable to create your account using Facebook. Please try another method.">
+        <source>Unable to create your account using Facebook. Please try another method.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Unable to create your account using Google. Please try another method.">
+        <source>Unable to create your account using Google. Please try another method.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Username">
+        <source>Username</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Username field is empty">
+        <source>Username field is empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Username should be 5 or more characters">
+        <source>Username should be 5 or more characters</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Verification Code">
+        <source>Verification Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Verification code sent">
+        <source>Verification code sent</source>
+        <note>Alert: Successful password reset</note>
+      </trans-unit>
+      <trans-unit id="Verifiying...">
+        <source>Verifiying...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Verify Identification">
+        <source>Verify Identification</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Verify Phone Number">
+        <source>Verify Phone Number</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="View Wallets">
+        <source>View Wallets</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="WEAK">
+        <source>WEAK</source>
+        <note>WEAK or STRONG password
+   Weak password</note>
+      </trans-unit>
+      <trans-unit id="Wallet">
+        <source>Wallet</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Wallet is Empty">
+        <source>Wallet is Empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="We have sent a confirmation code to \(phoneNumber). Please enter the code here to verify your phone number.">
+        <source>We have sent a confirmation code to \(phoneNumber). Please enter the code here to verify your phone number.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="We have sent a confirmation code to the phone number you signed up with. Please enter the code here to login.">
+        <source>We have sent a confirmation code to the phone number you signed up with. Please enter the code here to login.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="We’ll send you a confirmation code.">
+        <source>We’ll send you a confirmation code.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="What's this">
+        <source>What's this</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You">
+        <source>You</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You do not have enough funds in your \(transCoinName.uppercased()) Wallet to complete this payment">
+        <source>You do not have enough funds in your \(transCoinName.uppercased()) Wallet to complete this payment</source>
+        <note>Alert for Unavailable Wallet type to pay for a request</note>
+      </trans-unit>
+      <trans-unit id="Your">
+        <source>Your</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your account exists already. Please login">
+        <source>Your account exists already. Please login</source>
+        <note>Alert message for existing account</note>
+      </trans-unit>
+      <trans-unit id="Your account is not authorized to access this feature at this time. Please contact support@noomiwallet.com for more details.">
+        <source>Your account is not authorized to access this feature at this time. Please contact support@noomiwallet.com for more details.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your wallet transaction will appear here once you deposit some">
+        <source>Your wallet transaction will appear here once you deposit some</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Zip Code">
+        <source>Zip Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="and">
+        <source>and</source>
+        <note>And to link to statements</note>
+      </trans-unit>
+      <trans-unit id="continue">
+        <source>continue</source>
+        <note>Continue to the next screen title text</note>
+      </trans-unit>
+      <trans-unit id="in %.f days">
+        <source>in %.f days</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f hours">
+        <source>in %.f hours</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f minutes">
+        <source>in %.f minutes</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f months">
+        <source>in %.f months</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f seconds">
+        <source>in %.f seconds</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f weeks">
+        <source>in %.f weeks</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f years">
+        <source>in %.f years</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in 1 minute">
+        <source>in 1 minute</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in a few seconds">
+        <source>in a few seconds</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="just now">
+        <source>just now</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="last hour">
+        <source>last hour</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="last month">
+        <source>last month</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="last week">
+        <source>last week</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="last year">
+        <source>last year</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="name">
+        <source>name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="next hour">
+        <source>next hour</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="next month">
+        <source>next month</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="next week">
+        <source>next week</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="next year">
+        <source>next year</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="or have one of your friends send you some.">
+        <source>or have one of your friends send you some.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="to this address. Other types of cryptocurrency will be sent elsewhere and lost forever.">
+        <source>to this address. Other types of cryptocurrency will be sent elsewhere and lost forever.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="tomorrow">
+        <source>tomorrow</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="yesterday">
+        <source>yesterday</source>
+        <note>Date format</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="cryptowalletTests/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.4.1" build-num="9F2000"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="cryptowalletUITests/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.4.1" build-num="9F2000"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.4.1" build-num="9F2000"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName">
+        <source>Noomi</source>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSCameraUsageDescription">
+        <source>Enable Noomi scan QRCode</source>
+        <note>Privacy - Camera Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSContactsUsageDescription">
+        <source>Access your contacts to show you friends who are already on this App.</source>
+        <note>Privacy - Contacts Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSLocationWhenInUseUsageDescription">
+        <source>Predict your country code</source>
+        <note>Privacy - Location When In Use Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSPhotoLibraryUsageDescription">
+        <source>Access and select photo for your profile</source>
+        <note>Privacy - Photo Library Usage Description</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="en.lproj/Localizable.strings" datatype="plaintext" source-language="en">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.4.1" build-num="9F2000"/>
+    </header>
+    <body>
+      <trans-unit id=" (coming soon)">
+        <source> (coming soon)</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" Address">
+        <source> Address</source>
+        <note>Crypto wallet address</note>
+      </trans-unit>
+      <trans-unit id=" Requests">
+        <source> Requests</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" We require your phone number to ensure your  account is  secure. You will receive an sms message  anytime a new  device is used to login.">
+        <source> We require your phone number to ensure your  account is  secure. You will receive an sms message  anytime a new  device is used to login.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" You">
+        <source> You</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" and verify your account. ">
+        <source> and verify your account. </source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" sent">
+        <source> sent</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=" sent ">
+        <source> sent </source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="$">
+        <source>$</source>
+        <note>Local currency symbol
+   Local currency symbol. $ for Dollars
+   Local currency symbol. E.g $ for Dollars</note>
+      </trans-unit>
+      <trans-unit id="%.f days ago">
+        <source>%.f days ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f hours ago">
+        <source>%.f hours ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f minutes ago">
+        <source>%.f minutes ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f months ago">
+        <source>%.f months ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f seconds ago">
+        <source>%.f seconds ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f weeks ago">
+        <source>%.f weeks ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="%.f years ago">
+        <source>%.f years ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="*Optional">
+        <source>*Optional</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="1 minute ago">
+        <source>1 minute ago</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="2 Factor Authentication">
+        <source>2 Factor Authentication</source>
+        <note>SMS confirmation title</note>
+      </trans-unit>
+      <trans-unit id="6 Digit code expected">
+        <source>6 Digit code expected</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Access Contacts">
+        <source>Access Contacts</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add All As Friends">
+        <source>Add All As Friends</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add Friends">
+        <source>Add Friends</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add a Note (Optional)">
+        <source>Add a Note (Optional)</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Add as Friend">
+        <source>Add as Friend</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Address">
+        <source>Address</source>
+        <note>Crypto wallet address</note>
+      </trans-unit>
+      <trans-unit id="All Wallets">
+        <source>All Wallets</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Already have an account? Login">
+        <source>Already have an account? Login</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Amount">
+        <source>Amount</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Amount cannot be 0">
+        <source>Amount cannot be 0</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Amount field is empty">
+        <source>Amount field is empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Apt, Unit, or Suite Number">
+        <source>Apt, Unit, or Suite Number</source>
+        <note>Apartment, Unit or Suite Number</note>
+      </trans-unit>
+      <trans-unit id="Are you sure you want to decline this request?">
+        <source>Are you sure you want to decline this request?</source>
+        <note>Confirmation if the user wants to cancel the requests</note>
+      </trans-unit>
+      <trans-unit id="Are you sure you would like to pay">
+        <source>Are you sure you would like to pay</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Authenticating...">
+        <source>Authenticating...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="BTC">
+        <source>BTC</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Balance:">
+        <source>Balance:</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="By signing up, you are agreeing to Hedges \nTerms of Use and Privacy Policy.">
+        <source>By signing up, you are agreeing to Hedges \nTerms of Use and Privacy Policy.</source>
+        <note>Sign Up information</note>
+      </trans-unit>
+      <trans-unit id="By signing up, you are agreeing to Noomi's">
+        <source>By signing up, you are agreeing to Noomi's</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="CONTINUE WITH">
+        <source>CONTINUE WITH</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Camera access is denied">
+        <source>Camera access is denied</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Cancel">
+        <source>Cancel</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Cancel Request">
+        <source>Cancel Request</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Change">
+        <source>Change</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Change PIN">
+        <source>Change PIN</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Choose">
+        <source>Choose</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Choose a name that will help you distinguish this address from other ones in your account.">
+        <source>Choose a name that will help you distinguish this address from other ones in your account.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="City">
+        <source>City</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Coins are better with friends!">
+        <source>Coins are better with friends!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Comment">
+        <source>Comment</source>
+        <note>Comments button title</note>
+      </trans-unit>
+      <trans-unit id="Confirm New Password">
+        <source>Confirm New Password</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Confirm Password field cannot be empty">
+        <source>Confirm Password field cannot be empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Confirm Request">
+        <source>Confirm Request</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Confirm Sending">
+        <source>Confirm Sending</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Confirmation Code">
+        <source>Confirmation Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Confirmation field empty">
+        <source>Confirmation field empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Congratulations on setting up your Noomi Wallet! Add crypto now to start seeing your returns.">
+        <source>Congratulations on setting up your Noomi Wallet! Add crypto now to start seeing your returns.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Contacts">
+        <source>Contacts</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Continue">
+        <source>Continue</source>
+        <note>Continue to the next page</note>
+      </trans-unit>
+      <trans-unit id="Continue with Facebook">
+        <source>Continue with Facebook</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Copied">
+        <source>Copied</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Copy Wallet Address">
+        <source>Copy Wallet Address</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Country">
+        <source>Country</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Create New Address (Coming soon)">
+        <source>Create New Address (Coming soon)</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Create New Password">
+        <source>Create New Password</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Creating New Password...">
+        <source>Creating New Password...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Creating additional addresses can help make transactions more private when sending coins outside of Noomi Wallet.">
+        <source>Creating additional addresses can help make transactions more private when sending coins outside of Noomi Wallet.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Date of Birth">
+        <source>Date of Birth</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Decline">
+        <source>Decline</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Decline Request">
+        <source>Decline Request</source>
+        <note>Decline the request the user has sent</note>
+      </trans-unit>
+      <trans-unit id="Declining...">
+        <source>Declining...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Didn’t receive it? Tap Here to Resend">
+        <source>Didn’t receive it? Tap Here to Resend</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Done">
+        <source>Done</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Don’t have an account? Sign Up">
+        <source>Don’t have an account? Sign Up</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Double check your phone number">
+        <source>Double check your phone number</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Earn more with professionally-managed investing.">
+        <source>Earn more with professionally-managed investing.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Easily track and store all your cryptocurrencies.">
+        <source>Easily track and store all your cryptocurrencies.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Edit">
+        <source>Edit</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Email">
+        <source>Email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Email field cannot be empty">
+        <source>Email field cannot be empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Email field empty">
+        <source>Email field empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter Amount to Request">
+        <source>Enter Amount to Request</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter Amount to Send">
+        <source>Enter Amount to Send</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter Code">
+        <source>Enter Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter a new password to use with your account.">
+        <source>Enter a new password to use with your account.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter an amount">
+        <source>Enter an amount</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter the code you received">
+        <source>Enter the code you received</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter the code you received via email to change your password.">
+        <source>Enter the code you received via email to change your password.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Enter your email address and we will send you a code to reset your password.">
+        <source>Enter your email address and we will send you a code to reset your password.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Facebook">
+        <source>Facebook</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Fast">
+        <source>Fast</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Financial Regulations require that we collect this information to verify your identity.">
+        <source>Financial Regulations require that we collect this information to verify your identity.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Find Friends (Coming soon)">
+        <source>Find Friends (Coming soon)</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="First Name">
+        <source>First Name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="First Name field empty">
+        <source>First Name field empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="First Name is too short">
+        <source>First Name is too short</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Forgot Password">
+        <source>Forgot Password</source>
+        <note>Forgot password notice</note>
+      </trans-unit>
+      <trans-unit id="Friend">
+        <source>Friend</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Friends">
+        <source>Friends</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Hold to Confirm">
+        <source>Hold to Confirm</source>
+        <note>Hold to confirm</note>
+      </trans-unit>
+      <trans-unit id="Hold to \nConfirm">
+        <source>Hold to \nConfirm</source>
+        <note>Hold to Confirm. User should tap down the button to send or request funds</note>
+      </trans-unit>
+      <trans-unit id="IMPORTANT">
+        <source>IMPORTANT</source>
+        <note>Import information</note>
+      </trans-unit>
+      <trans-unit id="Instantly transfer cryptocurrency to friends.">
+        <source>Instantly transfer cryptocurrency to friends.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid Address">
+        <source>Invalid Address</source>
+        <note>Alert message for invalid Cybermiles/Ethereum address</note>
+      </trans-unit>
+      <trans-unit id="Invalid Email">
+        <source>Invalid Email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid Email Address">
+        <source>Invalid Email Address</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid amount entered">
+        <source>Invalid amount entered</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid email">
+        <source>Invalid email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Last Name">
+        <source>Last Name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Last Name field empty">
+        <source>Last Name field empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Last Name is too short">
+        <source>Last Name is too short</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Let us access your contacts so that you send crypto to your friends!">
+        <source>Let us access your contacts so that you send crypto to your friends!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Like">
+        <source>Like</source>
+        <note>Likes button title</note>
+      </trans-unit>
+      <trans-unit id="Loading ...">
+        <source>Loading ...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Logging in...">
+        <source>Logging in...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Login">
+        <source>Login</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Make sure the address you enter is correct and of the same type of coin that you are sending. Errors will result in the coins being sent to the incorrect address.">
+        <source>Make sure the address you enter is correct and of the same type of coin that you are sending. Errors will result in the coins being sent to the incorrect address.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Maximum on-chain transfer amount is currently set at 15 ETH.">
+        <source>Maximum on-chain transfer amount is currently set at 15 ETH.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Maximum on-chain transfer amount is currently set at 50,000 CMT.">
+        <source>Maximum on-chain transfer amount is currently set at 50,000 CMT.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="More Wallets Coming Soon">
+        <source>More Wallets Coming Soon</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="My Transactions">
+        <source>My Transactions</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="My Wallets">
+        <source>My Wallets</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Nationality">
+        <source>Nationality</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Network Issues - Transaction Will Be Sent Later">
+        <source>Network Issues - Transaction Will Be Sent Later</source>
+        <note>Alert for delay response from server(Backend)</note>
+      </trans-unit>
+      <trans-unit id="New Password">
+        <source>New Password</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="New Password field cannot be empty">
+        <source>New Password field cannot be empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Next">
+        <source>Next</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="No Upper case letter">
+        <source>No Upper case letter</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Not Right Now">
+        <source>Not Right Now</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Note ">
+        <source>Note </source>
+        <note>Note is for the caption the user added to the transfer</note>
+      </trans-unit>
+      <trans-unit id="Note: Only send">
+        <source>Note: Only send</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Note: Only send \(accountName) (\(coinName)) to this address. Other types of cryptocurrency will be sent elsewhere and lost forever.">
+        <source>Note: Only send \(accountName) (\(coinName)) to this address. Other types of cryptocurrency will be sent elsewhere and lost forever.</source>
+        <note>Ignore the account name and coin name in the brackets.</note>
+      </trans-unit>
+      <trans-unit id="OR USE YOUR EMAIL">
+        <source>OR USE YOUR EMAIL</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Other People on Noomi">
+        <source>Other People on Noomi</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password">
+        <source>Password</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password field cannot be empty">
+        <source>Password field cannot be empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password field empty">
+        <source>Password field empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password is too short">
+        <source>Password is too short</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password must be at least 8 characters long and contain 1 uppercase, 1 lowercase,  and 1 symbol or number.">
+        <source>Password must be at least 8 characters long and contain 1 uppercase, 1 lowercase,  and 1 symbol or number.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password reset successful">
+        <source>Password reset successful</source>
+        <note>Alert: Successful password reset</note>
+      </trans-unit>
+      <trans-unit id="Password short">
+        <source>Password short</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password too short">
+        <source>Password too short</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Password updated successfully">
+        <source>Password updated successfully</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Passwords don't match">
+        <source>Passwords don't match</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Passwords must contain 1 lowercase letter">
+        <source>Passwords must contain 1 lowercase letter</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Passwords must contain 1 symbol or 1 number">
+        <source>Passwords must contain 1 symbol or 1 number</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Pay">
+        <source>Pay</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Paying...">
+        <source>Paying...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Pending">
+        <source>Pending</source>
+        <note>Title for Pending requests</note>
+      </trans-unit>
+      <trans-unit id="Phone Number">
+        <source>Phone Number</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Phone number field is empty">
+        <source>Phone number field is empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please Enter First Name">
+        <source>Please Enter First Name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please Enter Last Name">
+        <source>Please Enter Last Name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please check your email">
+        <source>Please check your email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please check your inbox for a new verification email.">
+        <source>Please check your inbox for a new verification email.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Please confirm the email below and we will send you a code to change your PIN.">
+        <source>Please confirm the email below and we will send you a code to change your PIN.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Privacy">
+        <source>Privacy</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Privacy policy">
+        <source>Privacy policy</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Private">
+        <source>Private</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Processing">
+        <source>Processing</source>
+        <note>Activity in progress</note>
+      </trans-unit>
+      <trans-unit id="Public">
+        <source>Public</source>
+        <note>Privacy status. Private,Public or Friends only</note>
+      </trans-unit>
+      <trans-unit id="Pull down to refresh">
+        <source>Pull down to refresh</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Receiver Address field is empty">
+        <source>Receiver Address field is empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Receiver field cannot be empty">
+        <source>Receiver field cannot be empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Receiver’s Address">
+        <source>Receiver’s Address</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Refer and Get Free Crypto!">
+        <source>Refer and Get Free Crypto!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Referral Code">
+        <source>Referral Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Release to refresh">
+        <source>Release to refresh</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request">
+        <source>Request</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request Details">
+        <source>Request Details</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request From">
+        <source>Request From</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request Payment">
+        <source>Request Payment</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request from Friends">
+        <source>Request from Friends</source>
+        <note>Title for request token</note>
+      </trans-unit>
+      <trans-unit id="Request title">
+        <source>Request title</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Request to">
+        <source>Request to</source>
+        <note>Referring to a user that's being requested to</note>
+      </trans-unit>
+      <trans-unit id="Requests are only visible  to the sender and recipient.">
+        <source>Requests are only visible  to the sender and recipient.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="SMS Code has been sent successfully">
+        <source>SMS Code has been sent successfully</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="STRONG">
+        <source>STRONG</source>
+        <note>Strong password</note>
+      </trans-unit>
+      <trans-unit id="Safe">
+        <source>Safe</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Save">
+        <source>Save</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Search">
+        <source>Search</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Search by name, username, email">
+        <source>Search by name, username, email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Select Date of Birth">
+        <source>Select Date of Birth</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Send">
+        <source>Send</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Send Code">
+        <source>Send Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Send To">
+        <source>Send To</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Send to">
+        <source>Send to</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Send to Address">
+        <source>Send to Address</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sending code...">
+        <source>Sending code...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Settings">
+        <source>Settings</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Share">
+        <source>Share</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Show My Address">
+        <source>Show My Address</source>
+        <note>Show My Crypto Wallet Address</note>
+      </trans-unit>
+      <trans-unit id="Sign Up">
+        <source>Sign Up</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sign in with Google">
+        <source>Sign in with Google</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Signing Up...">
+        <source>Signing Up...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Skip">
+        <source>Skip</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Slow">
+        <source>Slow</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sorry this transaction is completed.">
+        <source>Sorry this transaction is completed.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sorry you do not have sufficient funds to complete this payment">
+        <source>Sorry you do not have sufficient funds to complete this payment</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sorry you do not have sufficient funds to complete this payment.">
+        <source>Sorry you do not have sufficient funds to complete this payment.</source>
+        <note>Alert for insufficient funds
+   Alert message for insufficient funds</note>
+      </trans-unit>
+      <trans-unit id="Speed">
+        <source>Speed</source>
+        <note>Fast or slow for the gateway to process the transaction onto the blockchain</note>
+      </trans-unit>
+      <trans-unit id="Sponsored Wallets">
+        <source>Sponsored Wallets</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="State">
+        <source>State</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Stay on top of the latest crypto trends.">
+        <source>Stay on top of the latest crypto trends.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Street Address">
+        <source>Street Address</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Symbol detected. \(char) is not allowed">
+        <source>Symbol detected. \(char) is not allowed</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Tap the button below to find your friends on Noomi.">
+        <source>Tap the button below to find your friends on Noomi.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Tap to Resend Email">
+        <source>Tap to Resend Email</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Terms of use">
+        <source>Terms of use</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="The network is experiencing some issues. Please try again later.">
+        <source>The network is experiencing some issues. Please try again later.</source>
+        <note>Alert message for failed request</note>
+      </trans-unit>
+      <trans-unit id="This request has already been declined.">
+        <source>This request has already been declined.</source>
+        <note>Alert message for request that has been paid already</note>
+      </trans-unit>
+      <trans-unit id="This request has already been paid.">
+        <source>This request has already been paid.</source>
+        <note>Alert message for request that has been declined already</note>
+      </trans-unit>
+      <trans-unit id="This request has been cancelled by the other person">
+        <source>This request has been cancelled by the other person</source>
+        <note>Alert message for cancelled request</note>
+      </trans-unit>
+      <trans-unit id="This request has been cancelled by the other person.">
+        <source>This request has been cancelled by the other person.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Total Wallets Balance">
+        <source>Total Wallets Balance</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="USD">
+        <source>USD</source>
+        <note>Abbreviation for local currency. E.g USD for United States Dollars
+   Abbreviation for local currency. USD for United States Dollars
+   Abbreviation for the local currency. USD for United States Dollars</note>
+      </trans-unit>
+      <trans-unit id="Unable to create your account using Facebook. Please try another method.">
+        <source>Unable to create your account using Facebook. Please try another method.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Unable to create your account using Google. Please try another method.">
+        <source>Unable to create your account using Google. Please try another method.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Username">
+        <source>Username</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Username field is empty">
+        <source>Username field is empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Username should be 5 or more characters">
+        <source>Username should be 5 or more characters</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Verification Code">
+        <source>Verification Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Verification code sent">
+        <source>Verification code sent</source>
+        <note>Alert: Successful password reset</note>
+      </trans-unit>
+      <trans-unit id="Verifiying...">
+        <source>Verifiying...</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Verify Identification">
+        <source>Verify Identification</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Verify Phone Number">
+        <source>Verify Phone Number</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="View Wallets">
+        <source>View Wallets</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="WEAK">
+        <source>WEAK</source>
+        <note>WEAK or STRONG password
+   Weak password</note>
+      </trans-unit>
+      <trans-unit id="Wallet">
+        <source>Wallet</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Wallet is Empty">
+        <source>Wallet is Empty</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="We have sent a confirmation code to \(phoneNumber). Please enter the code here to verify your phone number.">
+        <source>We have sent a confirmation code to \(phoneNumber). Please enter the code here to verify your phone number.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="We have sent a confirmation code to the phone number you signed up with. Please enter the code here to login.">
+        <source>We have sent a confirmation code to the phone number you signed up with. Please enter the code here to login.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="We’ll send you a confirmation code.">
+        <source>We’ll send you a confirmation code.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="What's this">
+        <source>What's this</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You">
+        <source>You</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="You do not have enough funds in your \(transCoinName.uppercased()) Wallet to complete this payment">
+        <source>You do not have enough funds in your \(transCoinName.uppercased()) Wallet to complete this payment</source>
+        <note>Alert for Unavailable Wallet type to pay for a request</note>
+      </trans-unit>
+      <trans-unit id="Your">
+        <source>Your</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your account exists already. Please login">
+        <source>Your account exists already. Please login</source>
+        <note>Alert message for existing account</note>
+      </trans-unit>
+      <trans-unit id="Your account is not authorized to access this feature at this time. Please contact support@noomiwallet.com for more details.">
+        <source>Your account is not authorized to access this feature at this time. Please contact support@noomiwallet.com for more details.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Your wallet transaction will appear here once you deposit some">
+        <source>Your wallet transaction will appear here once you deposit some</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Zip Code">
+        <source>Zip Code</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="and">
+        <source>and</source>
+        <note>And to link to statements</note>
+      </trans-unit>
+      <trans-unit id="continue">
+        <source>continue</source>
+        <note>Continue to the next screen title text</note>
+      </trans-unit>
+      <trans-unit id="in %.f days">
+        <source>in %.f days</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f hours">
+        <source>in %.f hours</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f minutes">
+        <source>in %.f minutes</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f months">
+        <source>in %.f months</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f seconds">
+        <source>in %.f seconds</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f weeks">
+        <source>in %.f weeks</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in %.f years">
+        <source>in %.f years</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in 1 minute">
+        <source>in 1 minute</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="in a few seconds">
+        <source>in a few seconds</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="just now">
+        <source>just now</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="last hour">
+        <source>last hour</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="last month">
+        <source>last month</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="last week">
+        <source>last week</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="last year">
+        <source>last year</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="name">
+        <source>name</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="next hour">
+        <source>next hour</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="next month">
+        <source>next month</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="next week">
+        <source>next week</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="next year">
+        <source>next year</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="or have one of your friends send you some.">
+        <source>or have one of your friends send you some.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="to this address. Other types of cryptocurrency will be sent elsewhere and lost forever.">
+        <source>to this address. Other types of cryptocurrency will be sent elsewhere and lost forever.</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="tomorrow">
+        <source>tomorrow</source>
+        <note>Date format</note>
+      </trans-unit>
+      <trans-unit id="yesterday">
+        <source>yesterday</source>
+        <note>Date format</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
