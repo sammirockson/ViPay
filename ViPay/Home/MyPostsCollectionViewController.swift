@@ -1,8 +1,8 @@
 //
-//  ShoppingCollectionViewController.swift
+//  MyPostsCollectionViewController.swift
 //  ViPay
 //
-//  Created by Rock on 2018/7/30.
+//  Created by Rock on 2018/8/4.
 //  Copyright © 2018 RockzAppStudio. All rights reserved.
 //
 
@@ -10,17 +10,21 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ShoppingCollectionViewController: UICollectionViewController {
+class MyPostsCollectionViewController: UICollectionViewController , UICollectionViewDelegateFlowLayout{
+    
+    let headerId = "headerId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        collectionView?.backgroundColor = .white
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView?.register(MyPostsCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+        
+        let leftNavBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Arrow Left").imageWithTintColor(color: .white), style: .done, target: self, action: #selector(handleBackButton))
+        navigationItem.setLeftBarButton(leftNavBarButton, animated: true)
+        
+        collectionView?.backgroundColor = UIColor.groupTableViewBackground
+      
 
         // Do any additional setup after loading the view.
     }
@@ -30,42 +34,54 @@ class ShoppingCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    @objc func handleBackButton(){
         
-        UIApplication.shared.statusBarStyle = .default
-
+        self.navigationController?.popViewController(animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return 10
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
+        cell.layer.cornerRadius = 24
+        cell.backgroundColor = .white
+        cell.layer.borderWidth = 0.2
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.shadowColor = RGB.sharedInstance.requiredColor(r: 0, g: 165, b: 255, alpha: 0.3).cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0.75)
+        cell.layer.shadowRadius = 3
+        cell.layer.shadowOpacity = 0.1
     
         return cell
+    }
+    
+   
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width - 20, height: 362)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 320)
+
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        var headerView: MyPostsCollectionReusableView?
+        headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as? MyPostsCollectionReusableView
+        headerView?.backgroundColor = UIColor.groupTableViewBackground
+        return headerView!
     }
 
     // MARK: UICollectionViewDelegate

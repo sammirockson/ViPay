@@ -24,10 +24,11 @@ class CustomTabBarController: UITabBarController {
         homeVC.tabBarItem.tag = 1
         
         
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        let shoppingVC = ShoppingCollectionViewController(collectionViewLayout: layout)
+//        let layout = UICollectionViewFlowLayout()
+//        layout.minimumLineSpacing = 0
+//        layout.minimumInteritemSpacing = 0
+        
+        let shoppingVC = ShoppingViewController()
         let shoppingNav = UINavigationController(rootViewController: shoppingVC)
         shoppingVC.tabBarItem.title = "Shop"
         shoppingVC.tabBarItem.image = #imageLiteral(resourceName: "shopUnselected")
@@ -43,17 +44,18 @@ class CustomTabBarController: UITabBarController {
         chatVC.tabBarItem.tag = 2
 
 
-        let cartLayout = UICollectionViewFlowLayout()
+//        let cartLayout = UICollectionViewFlowLayout()
 //        layout.minimumLineSpacing = 0
 //        layout.minimumInteritemSpacing = 0
-        let cartVC = MyCartCollectionViewController(collectionViewLayout: cartLayout)
+        
+        let cartVC = FoodViewController()
         let cartNav = UINavigationController(rootViewController: cartVC)
-        cartVC.tabBarItem.title = "Cart"
+        cartVC.tabBarItem.title = "Food"
         cartVC.tabBarItem.image = #imageLiteral(resourceName: "cartUnselected")
         cartVC.tabBarItem.selectedImage = #imageLiteral(resourceName: "cartSelected")
 
 
-        let moreVC = MoreItemsTableViewController(style: UITableViewStyle.grouped)
+        let moreVC = MoreItemsTableViewController()
         let moreNav = UINavigationController(rootViewController: moreVC)
         moreVC.tabBarItem.title = "Me"
         moreVC.tabBarItem.image = #imageLiteral(resourceName: "MeIcon")
@@ -61,7 +63,7 @@ class CustomTabBarController: UITabBarController {
         moreVC.tabBarItem.tag = 5
         
         
-        viewControllers = [homeNav,shoppingNav,chatNav,cartNav,moreNav]
+        viewControllers = [homeNav,chatNav,shoppingNav,cartNav,moreNav]
         
         
         

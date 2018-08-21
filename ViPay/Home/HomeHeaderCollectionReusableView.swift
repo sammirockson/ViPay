@@ -18,21 +18,21 @@ class HomeHeaderCollectionReusableView: UICollectionReusableView {
         return v
     }()
     
-    let myqrCode: BaseImageView = {
-        let v = BaseImageView(frame: .zero)
-        v.image = #imageLiteral(resourceName: "icon_qr")
-        v.contentMode = .scaleAspectFill
-        v.clipsToBounds = true
-        return v
-    }()
-    
-    let scanQrCode: BaseImageView = {
-        let v = BaseImageView(frame: .zero)
-        v.image = #imageLiteral(resourceName: "iconQrscan")
-        v.contentMode = .scaleAspectFill
-        v.clipsToBounds = true
-        return v
-    }()
+//    let myqrCode: BaseImageView = {
+//        let v = BaseImageView(frame: .zero)
+//        v.image = #imageLiteral(resourceName: "icon_qr")
+//        v.contentMode = .scaleAspectFill
+//        v.clipsToBounds = true
+//        return v
+//    }()
+//
+//    let scanQrCode: BaseImageView = {
+//        let v = BaseImageView(frame: .zero)
+//        v.image = #imageLiteral(resourceName: "iconQrscan")
+//        v.contentMode = .scaleAspectFill
+//        v.clipsToBounds = true
+//        return v
+//    }()
     
     
     let homeNavBarLabel: BaseLabel = {
@@ -130,9 +130,9 @@ class HomeHeaderCollectionReusableView: UICollectionReusableView {
         
         self.addSubview(backgroundImageV)
         self.addSubview(whatsOnMindContainer)
-        self.addSubview(myqrCode)
-        self.addSubview(scanQrCode)
-        self.addSubview(homeNavBarLabel)
+//        self.addSubview(myqrCode)
+//        self.addSubview(scanQrCode)
+//        self.addSubview(homeNavBarLabel)
         
         whatsOnMindContainer.addSubview(eventsWishLabel)
         whatsOnMindContainer.addSubview(whatsOnYourMind)
@@ -174,20 +174,20 @@ class HomeHeaderCollectionReusableView: UICollectionReusableView {
         eventsWishLabel.leftAnchor.constraint(equalTo: whatsOnMindContainer.leftAnchor, constant: 8).isActive = true
         eventsWishLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
-        homeNavBarLabel.rightAnchor.constraint(equalTo: myqrCode.leftAnchor, constant: -8).isActive = true
-        homeNavBarLabel.leftAnchor.constraint(equalTo: scanQrCode.rightAnchor, constant: 8).isActive = true
-        homeNavBarLabel.heightAnchor.constraint(equalToConstant: 34).isActive = true
-        homeNavBarLabel.centerYAnchor.constraint(equalTo: scanQrCode.centerYAnchor).isActive = true
+//        homeNavBarLabel.rightAnchor.constraint(equalTo: myqrCode.leftAnchor, constant: -8).isActive = true
+//        homeNavBarLabel.leftAnchor.constraint(equalTo: scanQrCode.rightAnchor, constant: 8).isActive = true
+//        homeNavBarLabel.heightAnchor.constraint(equalToConstant: 34).isActive = true
+//        homeNavBarLabel.centerYAnchor.constraint(equalTo: scanQrCode.centerYAnchor).isActive = true
         
-        scanQrCode.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
-        scanQrCode.bottomAnchor.constraint(equalTo: whatsOnMindContainer.topAnchor, constant: -90).isActive = true
-        scanQrCode.widthAnchor.constraint(equalToConstant: 26).isActive = true
-        scanQrCode.heightAnchor.constraint(equalToConstant: 26).isActive = true
-        
-        myqrCode.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
-        myqrCode.bottomAnchor.constraint(equalTo: whatsOnMindContainer.topAnchor, constant: -90).isActive = true
-        myqrCode.widthAnchor.constraint(equalToConstant: 26).isActive = true
-        myqrCode.heightAnchor.constraint(equalToConstant: 26).isActive = true
+//        scanQrCode.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
+//        scanQrCode.bottomAnchor.constraint(equalTo: whatsOnMindContainer.topAnchor, constant: -90).isActive = true
+//        scanQrCode.widthAnchor.constraint(equalToConstant: 26).isActive = true
+//        scanQrCode.heightAnchor.constraint(equalToConstant: 26).isActive = true
+//
+//        myqrCode.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
+//        myqrCode.bottomAnchor.constraint(equalTo: whatsOnMindContainer.topAnchor, constant: -90).isActive = true
+//        myqrCode.widthAnchor.constraint(equalToConstant: 26).isActive = true
+//        myqrCode.heightAnchor.constraint(equalToConstant: 26).isActive = true
         
         whatsOnMindContainer.topAnchor.constraint(equalTo: backgroundImageV.bottomAnchor, constant: -70).isActive = true
         whatsOnMindContainer.heightAnchor.constraint(equalToConstant: 140).isActive = true

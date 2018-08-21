@@ -15,7 +15,7 @@ class ProfileHeaderView: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 30
-//        imageView.image = #imageLiteral(resourceName: "personplaceholder")
+        imageView.image = #imageLiteral(resourceName: "binbing")
         imageView.contentMode = .scaleAspectFill
         return imageView
         
@@ -26,6 +26,7 @@ class ProfileHeaderView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
         label.numberOfLines = 0
+        label.text = "Samuel Rockson"
         label.font = UIFont(name: FontNames.OpenSansSemiBold, size: 16)
         return label
         

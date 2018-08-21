@@ -58,9 +58,13 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Select photo for your profile</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Scan qrcode</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>Save image</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Save photo</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>

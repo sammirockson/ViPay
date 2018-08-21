@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Parse
 
 let defaultAppColor = RGB.sharedInstance.requiredColor(r: 51, g: 34, b: 211, alpha: 1.0)
 
@@ -31,9 +32,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = RGB.sharedInstance.requiredColor(r: 51, g: 34, b: 211, alpha: 1.0)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: FontNames.OpenSansRegular, size: 8)!], for: .normal)
          UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: FontNames.OpenSansRegular, size: 8)!], for: .selected)
-       
-
         
+        
+        let config = ParseClientConfiguration {
+            $0.applicationId = "ATyPSdKPwkaPOJHl6btDi4jFe0atz9h50wcdPo47"
+            $0.clientKey = "HTag0BymffPPGGazDhcYPb1YYK6BpRvFAgA33pyk"
+            $0.server = "https://parseapi.back4app.com"
+        }
+        
+        Parse.initialize(with: config)
+        
+        let obj = PFObject(className: "TestClass")
+        obj.setObject("Hello world", forKey: "subtitle")
+        obj.saveInBackground { (success, error) in
+            print(error?.localizedDescription as Any)
+            print(success)
+        }
+       
         return true
     }
 

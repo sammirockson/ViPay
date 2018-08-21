@@ -9,7 +9,7 @@
 import UIKit
 //import Parse
 
-class ChatsTableViewController: UITableViewController, UISearchResultsUpdating {
+class ChatsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
     var users = [AnyObject]()
     
@@ -18,14 +18,32 @@ class ChatsTableViewController: UITableViewController, UISearchResultsUpdating {
         
     }
     
+    let customNavContainerView: BaseImageView = {
+        let v = BaseImageView(frame: .zero)
+        v.image = #imageLiteral(resourceName: "Background")
+        v.contentMode = .scaleAspectFill
+        v.clipsToBounds = true
+        v.isUserInteractionEnabled = true
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tb = UITableView()
+        tb.delegate = self
+        tb.dataSource = self
+        tb.translatesAutoresizingMaskIntoConstraints = false
+        return tb
+    }()
     
     
     let navBarTitleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont(name: FontNames.OpenSansSemiBold, size: 16)
         label.text = "Chats"
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -44,8 +62,6 @@ class ChatsTableViewController: UITableViewController, UISearchResultsUpdating {
         let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAddFriends))
         navigationItem.setRightBarButtonItems([rightBarButtonItem], animated: true)
         
-        self.loadUsers()
-        navigationItem.titleView = navBarTitleLabel
 
 //        navigationController?.navigationBar.barTintColor = LoginViewController.defaultColor
 //        navigationController?.navigationBar.tintColor = .white
@@ -61,41 +77,50 @@ class ChatsTableViewController: UITableViewController, UISearchResultsUpdating {
 //        self.searchController.searchBar.delegate = self
         
         tableView.tableHeaderView = searchController.searchBar
+        self.setUpViews()
+        view.backgroundColor = .white
     }
     
     
 
-    
-    
-    func loadUsers(){
+    func setUpViews(){
         
-//       let query = BmobUser.query()
-//        query?.cachePolicy = kBmobCachePolicyCacheThenNetwork
-//        query?.findObjectsInBackground({ (results, error) in
-//            if error == nil {
-//                self.users.removeAll(keepingCapacity: true)
-//
-//                if results!.count > 0 {
-//
-//                    for result in results! {
-//
-//                     self.users.append(result as! BmobUser)
-//
-//                    }
-//
-//                    DispatchQueue.main.async {
-//
-//                        self.tableView.reloadData()
-//                    }
-//
-//                }
-//
-//
-//            }else{
-//
-//
-//            }
-//        })
+        view.addSubview(customNavContainerView)
+        customNavContainerView.addSubview(navBarTitleLabel)
+        view.addSubview(tableView)
+        
+        tableView.topAnchor.constraint(equalTo: customNavContainerView.bottomAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        
+        if UIDevice.current.isIphoneX {
+            
+            navBarTitleLabel.centerYAnchor.constraint(equalTo: customNavContainerView.centerYAnchor, constant: 15).isActive = true
+
+            
+        }else{
+            
+            navBarTitleLabel.centerYAnchor.constraint(equalTo: customNavContainerView.centerYAnchor, constant: 10).isActive = true
+
+        }
+        navBarTitleLabel.rightAnchor.constraint(equalTo: customNavContainerView.rightAnchor, constant: -32).isActive = true
+        navBarTitleLabel.leftAnchor.constraint(equalTo: customNavContainerView.leftAnchor, constant: 32).isActive = true
+        navBarTitleLabel.heightAnchor.constraint(equalToConstant: 34).isActive = true
+        
+        customNavContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        customNavContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        customNavContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        if UIDevice.current.isIphoneX {
+            
+            customNavContainerView.heightAnchor.constraint(equalToConstant: 90).isActive = true
+            
+            
+        }else{
+            
+            customNavContainerView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+            
+        }
         
     }
     
@@ -174,13 +199,16 @@ class ChatsTableViewController: UITableViewController, UISearchResultsUpdating {
         
         queryRoom()
         
-//        self.navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "GhPayColor"), for: .default)
-//        navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationController?.navigationBar.barTintColor = LoginViewController.defaultColor
+        UIApplication.shared.statusBarStyle = .lightContent
+        navigationController?.isNavigationBarHidden = true
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
+        navigationController?.isNavigationBarHidden = false
+
     }
     
     
@@ -191,18 +219,18 @@ class ChatsTableViewController: UITableViewController, UISearchResultsUpdating {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.users.count
+        return 100
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifierString, for: indexPath) as! ChatsTableViewCell
         
 //        let user = self.users[indexPath.row]
@@ -218,17 +246,17 @@ class ChatsTableViewController: UITableViewController, UISearchResultsUpdating {
         return cell
     }
  
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 66
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
     
-   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        let layout = UICollectionViewFlowLayout()
-//        layout.minimumLineSpacing = 0
-//        let messagesVC = ChatLogsCollectionViewController(collectionViewLayout: layout)
-//        messagesVC.hidesBottomBarWhenPushed = true
-//        self.navigationController?.pushViewController(messagesVC, animated: true)
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0
+        let messagesVC = ChatLogsCollectionViewController(collectionViewLayout: layout)
+        messagesVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(messagesVC, animated: true)
 
     }
  

@@ -12,6 +12,7 @@ target 'ViPay' do
     pod 'Alamofire'
     pod 'SVProgressHUD'
     pod 'SwiftyJSON'
+    pod 'Parse'
 
 
   target 'ViPayTests' do

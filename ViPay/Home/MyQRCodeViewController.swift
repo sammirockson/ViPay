@@ -101,7 +101,8 @@ class MyQRCodeViewController: UIViewController {
         view.backgroundColor = .white
         
        
-     
+        let leftNavBar = UIBarButtonItem(image: UIImage(), style: .done, target: self, action: #selector(handleNothing))
+        navigationItem.setRightBarButton(leftNavBar, animated: true)
         
 //        if let currentUser = PFUser.current() {
         
@@ -118,6 +119,12 @@ class MyQRCodeViewController: UIViewController {
 
     }
 
+    
+    @objc func handleNothing(){
+        
+        
+        
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
