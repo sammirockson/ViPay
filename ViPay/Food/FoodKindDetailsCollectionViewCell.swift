@@ -18,7 +18,7 @@ class FoodKindDetailsCollectionViewCell: UICollectionViewCell {
         imv.contentMode = .scaleAspectFill
         imv.clipsToBounds = true
         imv.image = #imageLiteral(resourceName: "McDon")
-        //        imv.layer.cornerRadius = 5
+//                imv.layer.cornerRadius = 5
         return imv
         
     }()
@@ -43,7 +43,6 @@ class FoodKindDetailsCollectionViewCell: UICollectionViewCell {
         label.numberOfLines = 1
         label.textColor = .red
         return label
-        
     }()
     
     

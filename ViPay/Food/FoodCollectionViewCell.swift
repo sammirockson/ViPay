@@ -63,7 +63,6 @@ class FoodCollectionViewCell: UICollectionViewCell {
         label.font = UIFont(name: FontNames.OpenSansRegular, size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
-        label.textColor = .gray
         label.numberOfLines = 2
         return label
     }()

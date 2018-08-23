@@ -59,7 +59,6 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
         label.isEnabled = false
         label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handlePayOrder)))
         return label
-        
     }()
     
     
@@ -716,20 +715,21 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
     
     @objc func handlePayOrder(){
         
+        let confVC = ConfirmOrderViewController()
+        navigationController?.pushViewController(confVC, animated: true)
         
+//        let request: NSFetchRequest<TotalPrice> = TotalPrice.fetchRequest()
+//
+//        do {
+//
+//            let results = try self.moc.fetch(request)
+//
+//            print(results.count)
+//
+//            if results.count > 0 {
+//
+//                if shoppingCartLabel.isEnabled == true {
         
-        let request: NSFetchRequest<TotalPrice> = TotalPrice.fetchRequest()
-        
-        do {
-            
-            let results = try self.moc.fetch(request)
-            
-            print(results.count)
-            
-            if results.count > 0 {
-                
-                if shoppingCartLabel.isEnabled == true {
-                    
                     
 //                    let layout = UICollectionViewFlowLayout()
 //                    layout.minimumLineSpacing = 2
@@ -741,14 +741,14 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
 //
                     
                     
-                }
-                
-              
-            }
-            
-        }catch{}
-        
-        
+//                }
+//
+//
+//            }
+//
+//        }catch{}
+//
+//
         
         
         
@@ -764,6 +764,8 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
         //
         
     }
+    
+    
     
     
     func setUpViews(){
@@ -1150,13 +1152,14 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
         var headerView: FoodDetailsCollectionReusableView?
         
         headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as? FoodDetailsCollectionReusableView
+        headerView?.backgroundColor = .white
         return headerView!
         
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 300)
+        return CGSize(width: view.frame.width, height: 530)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

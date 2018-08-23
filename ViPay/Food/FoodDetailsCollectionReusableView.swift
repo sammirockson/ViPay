@@ -12,7 +12,7 @@ class FoodDetailsCollectionReusableView: UICollectionReusableView {
     
     let backgroundImageView: UIImageView = {
         let v = UIImageView()
-        v.image = #imageLiteral(resourceName: "Background")
+        v.image = #imageLiteral(resourceName: "binbing")
         v.contentMode = .scaleAspectFill
         v.clipsToBounds = true
         v.isUserInteractionEnabled = true
@@ -42,6 +42,33 @@ class FoodDetailsCollectionReusableView: UICollectionReusableView {
         return v
     }()
     
+    let restNameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.text = "Afro Caussian Resto"
+        label.font = UIFont(name: FontNames.OpenSansBold, size: 16)
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    
+    let restoAddressLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.text = "110 street, Bantama, Kumasi. The address should be more"
+        label.font = UIFont(name: FontNames.OpenSansRegular, size: 14)
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    let recentFoodItemsContainerV: RecentFoodItemsContainerView = {
+        let v = RecentFoodItemsContainerView(frame: .zero)
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -57,11 +84,31 @@ class FoodDetailsCollectionReusableView: UICollectionReusableView {
         self.addSubview(backgroundImageView)
         self.addSubview(profileImageView)
         self.addSubview(favRestaurant)
+        self.addSubview(restNameLabel)
+        self.addSubview(restoAddressLabel)
+        self.addSubview(recentFoodItemsContainerV)
         
+        
+        
+        
+        recentFoodItemsContainerV.topAnchor.constraint(equalTo: restoAddressLabel.bottomAnchor, constant: 15).isActive = true
+        recentFoodItemsContainerV.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -4).isActive = true
+        recentFoodItemsContainerV.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 4).isActive = true
+        recentFoodItemsContainerV.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        
+        restoAddressLabel.topAnchor.constraint(equalTo: restNameLabel.bottomAnchor, constant: 5).isActive = true
+        restoAddressLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8).isActive = true
+        restoAddressLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
+        restoAddressLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        restNameLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 10).isActive = true
+        restNameLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8).isActive = true
+        restNameLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
+        restNameLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         favRestaurant.centerYAnchor.constraint(equalTo: backgroundImageView.bottomAnchor).isActive = true
-        favRestaurant.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        favRestaurant.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        favRestaurant.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        favRestaurant.heightAnchor.constraint(equalToConstant: 30).isActive = true
         favRestaurant.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
         
         profileImageView.centerYAnchor.constraint(equalTo: backgroundImageView.bottomAnchor).isActive = true

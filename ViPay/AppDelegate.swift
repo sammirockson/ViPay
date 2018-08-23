@@ -34,13 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: FontNames.OpenSansRegular, size: 8)!], for: .selected)
         
         
-        let config = ParseClientConfiguration {
-            $0.applicationId = "ATyPSdKPwkaPOJHl6btDi4jFe0atz9h50wcdPo47"
-            $0.clientKey = "HTag0BymffPPGGazDhcYPb1YYK6BpRvFAgA33pyk"
-            $0.server = "https://parseapi.back4app.com"
-        }
-        
-        Parse.initialize(with: config)
+        Network.sharedInstance.initParse()
+     
         
         let obj = PFObject(className: "TestClass")
         obj.setObject("Hello world", forKey: "subtitle")

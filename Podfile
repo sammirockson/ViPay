@@ -13,6 +13,7 @@ target 'ViPay' do
     pod 'SVProgressHUD'
     pod 'SwiftyJSON'
     pod 'Parse'
+    pod 'MarqueeLabel/Swift'
 
 
   target 'ViPayTests' do
