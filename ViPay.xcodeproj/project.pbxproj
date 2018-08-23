@@ -57,6 +57,7 @@
 		DDCE37B92121D5B9007ECF56 /* MarketIndicatorContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE37B82121D5B9007ECF56 /* MarketIndicatorContainerView.swift */; };
 		DDCE37BB2121D5F7007ECF56 /* MarketPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE37BA2121D5F7007ECF56 /* MarketPreviewCollectionViewCell.swift */; };
 		DDCE37BD2121D6D9007ECF56 /* IndicatorCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE37BC2121D6D9007ECF56 /* IndicatorCellCollectionViewCell.swift */; };
+		DDCF47E6212E32E000F0D5B9 /* FoodDetailsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF47E5212E32E000F0D5B9 /* FoodDetailsCollectionReusableView.swift */; };
 		DDE544A9210E505900A27615 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE5449E210E4FFC00A27615 /* OpenSans-Bold.ttf */; };
 		DDE544AA210E505C00A27615 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE544A7210E4FFE00A27615 /* OpenSans-BoldItalic.ttf */; };
 		DDE544AB210E505F00A27615 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDE544A6210E4FFE00A27615 /* OpenSans-ExtraBold.ttf */; };
@@ -160,6 +161,7 @@
 		DDCE37B82121D5B9007ECF56 /* MarketIndicatorContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketIndicatorContainerView.swift; sourceTree = "<group>"; };
 		DDCE37BA2121D5F7007ECF56 /* MarketPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDCE37BC2121D6D9007ECF56 /* IndicatorCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		DDCF47E5212E32E000F0D5B9 /* FoodDetailsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsCollectionReusableView.swift; sourceTree = "<group>"; };
 		DDE5449E210E4FFC00A27615 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		DDE5449F210E4FFD00A27615 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		DDE544A0210E4FFD00A27615 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -370,8 +372,9 @@
 				DDC9323B21290A000091EE96 /* FoodViewController.swift */,
 				DD5C016F21291E120037B601 /* FoodCollectionViewCell.swift */,
 				DD5C017121291E390037B601 /* FoodCollectionReusableView.swift */,
-				DD5C01742129263D0037B601 /* FoodKindDetailsCollectionViewCell.swift */,
 				DD5C01732129263D0037B601 /* FoodKindDetailsCollectionViewController.swift */,
+				DDCF47E5212E32E000F0D5B9 /* FoodDetailsCollectionReusableView.swift */,
+				DD5C01742129263D0037B601 /* FoodKindDetailsCollectionViewCell.swift */,
 				DD5C017721292A710037B601 /* Food.swift */,
 			);
 			path = Food;
@@ -683,6 +686,7 @@
 				DD5C017221291E390037B601 /* FoodCollectionReusableView.swift in Sources */,
 				DD5C01752129263D0037B601 /* FoodKindDetailsCollectionViewController.swift in Sources */,
 				DD0F8FEC210E64AB0044E5EC /* MyCartCollectionViewController.swift in Sources */,
+				DDCF47E6212E32E000F0D5B9 /* FoodDetailsCollectionReusableView.swift in Sources */,
 				DD9D16C22120B2870077DE47 /* ShoppingHeaderCollectionReusableView.swift in Sources */,
 				DDC93234212901030091EE96 /* LBXScanLineAnimation.swift in Sources */,
 				DDCE37BB2121D5F7007ECF56 /* MarketPreviewCollectionViewCell.swift in Sources */,

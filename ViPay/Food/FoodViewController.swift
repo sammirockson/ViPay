@@ -187,8 +187,8 @@ class FoodViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
      func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let layout = UICollectionViewFlowLayout()
-        let foodKindVC = FoodKindDetailsCollectionViewController(collectionViewLayout: layout)
+       
+        let foodKindVC = FoodKindDetailsCollectionViewController()
         foodKindVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(foodKindVC, animated: true)
         

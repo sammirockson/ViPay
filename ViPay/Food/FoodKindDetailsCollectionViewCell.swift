@@ -17,7 +17,7 @@ class FoodKindDetailsCollectionViewCell: UICollectionViewCell {
         imv.translatesAutoresizingMaskIntoConstraints = false
         imv.contentMode = .scaleAspectFill
         imv.clipsToBounds = true
-        imv.image = #imageLiteral(resourceName: "burger")
+        imv.image = #imageLiteral(resourceName: "McDon")
         //        imv.layer.cornerRadius = 5
         return imv
         
@@ -28,7 +28,7 @@ class FoodKindDetailsCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.text = "Fast Food"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont(name: FontNames.OpenSansSemiBold, size: 14)
         label.numberOfLines = 1
         return label
         
@@ -39,7 +39,7 @@ class FoodKindDetailsCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.text = "Ghc 5.00"
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont(name: FontNames.OpenSansSemiBold, size: 12)
         label.numberOfLines = 1
         label.textColor = .red
         return label
@@ -52,7 +52,7 @@ class FoodKindDetailsCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.text = "0"
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont(name: FontNames.OpenSansBold, size: 12)
         label.numberOfLines = 1
         label.textColor = .black
         label.isHidden = true
@@ -67,13 +67,13 @@ class FoodKindDetailsCollectionViewCell: UICollectionViewCell {
     let addButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.borderColor = UIColor.gray.cgColor
+//        button.layer.borderColor = UIColor.gray.cgColor
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 13
         button.clipsToBounds = true
         button.setTitle("+", for: .normal)
         button.titleLabel?.textAlignment = .center
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        button.titleLabel?.font = UIFont(name: FontNames.OpenSansBold, size: 22)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blue
         return button
@@ -90,7 +90,7 @@ class FoodKindDetailsCollectionViewCell: UICollectionViewCell {
         button.clipsToBounds = true
         button.setTitle("-", for: .normal)
         button.titleLabel?.textAlignment = .center
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        button.titleLabel?.font = UIFont(name: FontNames.OpenSansBold, size: 22)
         button.setTitleColor(.blue, for: .normal)
         button.isHidden = true
         //        button.backgroundColor = .blue

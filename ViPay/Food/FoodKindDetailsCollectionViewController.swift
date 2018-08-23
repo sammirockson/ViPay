@@ -10,12 +10,26 @@ import UIKit
 import CoreData
 
 
-class FoodKindDetailsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class FoodKindDetailsCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var quantityOfFoodOrderedArray = [Food]()
     var totalPrice: Int = 0
     
     
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 3
+        layout.minimumInteritemSpacing = 0
+//        layout.minimumLineSpacing = 0
+//        layout.minimumInteritemSpacing = 0
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.delegate = self
+        cv.dataSource = self
+        cv.backgroundColor = UIColor.groupTableViewBackground
+        return cv
+    }()
     
     let moc: NSManagedObjectContext = {
         let objectContext: NSManagedObjectContext?
@@ -84,7 +98,6 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
         label.layer.cornerRadius = 15
         label.clipsToBounds = true
         return label
-        
     }()
     
     
@@ -107,6 +120,27 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
         return label
     }()
     
+    let customNavContainerView: UIImageView = {
+        let v = UIImageView()
+//        v.image = #imageLiteral(resourceName: "transNav")
+//        v.backgroundColor = UIColor(white: 0.1, alpha: 0.2)
+        v.contentMode = .scaleAspectFill
+        v.clipsToBounds = true
+        v.isUserInteractionEnabled = true
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    
+    lazy var backButton: UIButton = {
+        let btn = UIButton()
+        btn.setBackgroundImage(#imageLiteral(resourceName: "Arrow Left").imageWithTintColor(color: .white), for: .normal)
+        btn.addTarget(self, action: #selector(handleBackButton), for: .touchUpInside)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
+    
+    let headerId = "headerId"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,20 +150,21 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
         totalPrice = 0
         
         navigationItem.titleView = navTitle
-        collectionView?.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
+        collectionView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         
         let leftArrowIcon = #imageLiteral(resourceName: "Arrow Left")
         let leftBackButton = UIBarButtonItem(image: leftArrowIcon, style: .done, target: self, action: #selector(handleBackButton))
         navigationItem.setLeftBarButton(leftBackButton, animated: true)
 
         
-        collectionView?.contentInset = UIEdgeInsetsMake(0, 0, 60, 0)
-        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 60, 0)
+        collectionView.contentInset = UIEdgeInsetsMake(0, 0, 60, 0)
+        collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 60, 0)
         
        
         
         // Register cell classes
-        self.collectionView!.register(FoodKindDetailsCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView.register(FoodKindDetailsCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.register(FoodDetailsCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         
         self.updatePriceLabel()
         
@@ -151,6 +186,49 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
         
         
     }
+    
+    
+    
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        
+        customNavContainerView.image = UIImage()
+        
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        //-44.0
+        
+        if targetContentOffset.pointee.y < 10.0 {
+            
+            customNavContainerView.image = UIImage()
+            
+            
+        }else{
+            
+            customNavContainerView.image = #imageLiteral(resourceName: "transparentNavBar")
+            
+        }
+        
+    }
+    
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        navigationController?.isNavigationBarHidden = true
+//
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//
+//        navigationController?.isNavigationBarHidden = false
+//
+//    }
+    
+    
+    
     
     func queryFoodItems(){
         
@@ -690,11 +768,53 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
     
     func setUpViews(){
         
+        
+        view.addSubview(collectionView)
+        self.view.addSubview(customNavContainerView)
+        customNavContainerView.addSubview(backButton)
+        
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        
         self.view.addSubview(cartContainerView)
+        
         cartContainerView.addSubview(shoppingCartLabel)
         cartContainerView.addSubview(cartImageView)
         cartContainerView.addSubview(priceLabel)
         cartContainerView.addSubview(totalQuantityLabel)
+        
+        
+//        backButton.centerYAnchor.constraint(equalTo: customNavContainerView.centerYAnchor).isActive = true
+        if UIDevice.current.isIphoneX {
+            
+            backButton.centerYAnchor.constraint(equalTo: customNavContainerView.centerYAnchor, constant: 15).isActive = true
+            
+            
+        }else{
+            
+            backButton.centerYAnchor.constraint(equalTo: customNavContainerView.centerYAnchor, constant: 10).isActive = true
+            
+        }
+        backButton.leftAnchor.constraint(equalTo: customNavContainerView.leftAnchor, constant: 15).isActive = true
+        backButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        backButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        customNavContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        customNavContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        customNavContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        if UIDevice.current.isIphoneX {
+            
+            customNavContainerView.heightAnchor.constraint(equalToConstant: 90).isActive = true
+            
+            
+        }else{
+            
+            customNavContainerView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+            
+        }
+        
         
         totalQuantityLabel.centerYAnchor.constraint(equalTo: cartImageView.centerYAnchor, constant: -15).isActive = true
         totalQuantityLabel.widthAnchor.constraint(equalToConstant: 30).isActive = true
@@ -733,6 +853,9 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
         navigationController?.navigationBar.backgroundColor = defaultAppColor
         navigationController?.navigationBar.barTintColor = defaultAppColor
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        navigationController?.isNavigationBarHidden = true
+
 //        navigationController?.isNavigationBarHidden = true
         
     }
@@ -740,7 +863,7 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-//        navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = false
         
     }
     
@@ -750,10 +873,10 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
         
         
         let point = sender.convert(sender.bounds.origin, to: collectionView)
-        if let indexPath = collectionView?.indexPathForItem(at: point) {
+        if let indexPath = collectionView.indexPathForItem(at: point) {
             
             
-            if let cell = collectionView?.cellForItem(at: indexPath) as? FoodKindDetailsCollectionViewCell{
+            if let cell = collectionView.cellForItem(at: indexPath) as? FoodKindDetailsCollectionViewCell{
                 let selectedItem = self.foodArray[indexPath.item]
                 
                 
@@ -787,11 +910,11 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
     @objc func handleModifyOrder(sender: UIButton){
         
         let point = sender.convert(sender.bounds.origin, to: collectionView)
-        if let indexPath = collectionView?.indexPathForItem(at: point) {
+        if let indexPath = collectionView.indexPathForItem(at: point) {
             
             let selectedItem = self.foodArray[indexPath.item]
             
-            if let cell = collectionView?.cellForItem(at: indexPath) as? FoodKindDetailsCollectionViewCell{
+            if let cell = collectionView.cellForItem(at: indexPath) as? FoodKindDetailsCollectionViewCell{
                 
                 self.queryandUpdateCoreData(order: selectedItem, cell: cell)
                 
@@ -923,18 +1046,18 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
     
     // MARK: UICollectionViewDataSource
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return self.foodArray.count
+        return 100
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FoodKindDetailsCollectionViewCell
         
         cell.layer.cornerRadius = 4
@@ -943,54 +1066,54 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
         
         cell.incomingVC = self
         
-        let foodItem = self.foodArray[indexPath.item]
-        cell.priceLabel.text = "Ghc \(String(describing: foodItem.price!))"
-        cell.titleLabel.text = foodItem.foodTitle
-        
-        
-        if let urlString = foodItem.thumbnailImageURL {
-            
-//            cell.itemDisplayImage.sd_setImage(with: URL(string: urlString), placeholderImage: #imageLiteral(resourceName: "personplaceholder"))
-            
-        }
-        
-        
-        let request: NSFetchRequest<Order> = Order.fetchRequest()
-        request.predicate = NSPredicate(format: "objectId == %@", foodItem.objectId!)
-        
-        do {
-            let results = try moc.fetch(request)
-            
-            
-            if results.count > 0  {
-                
-                // save the new user if the user doesn't exis
-                
-                for result in results {
-                    
-                    cell.deleteOrderButton.isHidden = false
-                    cell.quantityLabel.text = "\(Int(result.quantity))"
-                    cell.quantityLabel.isHidden = false
-                    
-                }
-                
-                
-            }else{
-                
-                cell.deleteOrderButton.isHidden = true
-                cell.quantityLabel.isHidden = true
-                
-                
-                
-                
-            }
-            
-        } catch {
-            //            loadingObjectsView.isHidden = true
-            print("Error with request: \(error)")
-            
-            
-        }
+//        let foodItem = self.foodArray[indexPath.item]
+//        cell.priceLabel.text = "Ghc \(String(describing: foodItem.price!))"
+//        cell.titleLabel.text = foodItem.foodTitle
+//
+//
+//        if let urlString = foodItem.thumbnailImageURL {
+//
+////            cell.itemDisplayImage.sd_setImage(with: URL(string: urlString), placeholderImage: #imageLiteral(resourceName: "personplaceholder"))
+//
+//        }
+//
+//
+//        let request: NSFetchRequest<Order> = Order.fetchRequest()
+//        request.predicate = NSPredicate(format: "objectId == %@", foodItem.objectId!)
+//
+//        do {
+//            let results = try moc.fetch(request)
+//
+//
+//            if results.count > 0  {
+//
+//                // save the new user if the user doesn't exis
+//
+//                for result in results {
+//
+//                    cell.deleteOrderButton.isHidden = false
+//                    cell.quantityLabel.text = "\(Int(result.quantity))"
+//                    cell.quantityLabel.isHidden = false
+//
+//                }
+//
+//
+//            }else{
+//
+//                cell.deleteOrderButton.isHidden = true
+//                cell.quantityLabel.isHidden = true
+//
+//
+//
+//
+//            }
+//
+//        } catch {
+//            //            loadingObjectsView.isHidden = true
+//            print("Error with request: \(error)")
+//
+//
+//        }
         
         
         
@@ -1000,6 +1123,9 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
         
         cell.addButton.addTarget(self, action: #selector(handleAddOrder), for: .touchUpInside)
         cell.deleteOrderButton.addTarget(self, action: #selector(handleModifyOrder), for: .touchUpInside)
+        
+        
+        
         
         //        let attributedMutableText = NSMutableAttributedString(string: "Burger", attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 15), NSForegroundColorAttributeName: UIColor.black])
         //
@@ -1020,7 +1146,18 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        var headerView: FoodDetailsCollectionReusableView?
+        
+        headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as? FoodDetailsCollectionReusableView
+        return headerView!
+        
+    }
     
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 300)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -1029,7 +1166,7 @@ class FoodKindDetailsCollectionViewController: UICollectionViewController, UICol
         return CGSize(width: width, height: 250)
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
     
