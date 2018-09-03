@@ -44,7 +44,7 @@ class ConfirmOrderViewController: UIViewController, UICollectionViewDelegateFlow
     
     lazy var backButton: UIButton = {
         let btn = UIButton()
-        btn.setBackgroundImage(#imageLiteral(resourceName: "Arrow Left").imageWithTintColor(color: .white), for: .normal)
+        btn.setBackgroundImage(#imageLiteral(resourceName: "iconArrowBack"), for: .normal)
         btn.addTarget(self, action: #selector(handleBackButton), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
@@ -52,22 +52,21 @@ class ConfirmOrderViewController: UIViewController, UICollectionViewDelegateFlow
     
     let bottomItemsContainerView: UIView = {
         let v = UIView()
-        v.backgroundColor = UIColor.lightGray
+        v.backgroundColor = UIColor.white
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
     
-    lazy var payLabel: UILabel = {
-        let label = UILabel()
+    lazy var payLabel: UIButton = {
+        let label = UIButton()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
         label.backgroundColor = defaultAppColor
-        label.text = "Pay"
-        label.textColor = .white
-        label.font = UIFont(name: FontNames.OpenSansSemiBold, size: 18)
-        label.numberOfLines = 0
-        label.textAlignment = .center
+        label.setTitle("Pay", for: .normal)
+        label.setTitleColor(.white, for: .normal)
+        label.titleLabel?.font = UIFont(name: FontNames.OpenSansSemiBold, size: 18)
         label.isUserInteractionEnabled = true
+        label.setBackgroundImage(#imageLiteral(resourceName: "backgrounGradientImage"), for: .normal)
 //        label.isEnabled = false
 //        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handlePayOrder)))
         return label
@@ -79,7 +78,7 @@ class ConfirmOrderViewController: UIViewController, UICollectionViewDelegateFlow
         label.text = "Ghc 240"
         label.font = UIFont(name: FontNames.OpenSansSemiBold, size: 16)
         label.numberOfLines = 1
-        label.textColor = .white
+        label.textColor = defaultAppColor
         label.clipsToBounds = true
         return label
     }()
@@ -92,7 +91,7 @@ class ConfirmOrderViewController: UIViewController, UICollectionViewDelegateFlow
 
         setUpViews()
         view.backgroundColor = .white
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: identifier)
+        collectionView.register(ConfirmOrderCollectionViewCell.self, forCellWithReuseIdentifier: identifier)
         collectionView.register(ConfirmOrderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
     }
 
@@ -114,9 +113,33 @@ class ConfirmOrderViewController: UIViewController, UICollectionViewDelegateFlow
         
         navigationController?.isNavigationBarHidden = false
         
+        if let cells = self.collectionView.visibleCells as? [ConfirmOrderCollectionViewCell]{
+            
+            for cell in cells {
+                
+                cell.swipeCloseAllOtherCells(cell: cell)
+                
+                
+                
+            }
+        }
+        
     }
     
  
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        if let cells = self.collectionView.visibleCells as? [ConfirmOrderCollectionViewCell]{
+            
+            for cell in cells {
+                
+                cell.swipeCloseAllOtherCells(cell: cell)
+                
+                
+                
+            }
+        }
+    }
     
     func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
 
@@ -135,7 +158,7 @@ class ConfirmOrderViewController: UIViewController, UICollectionViewDelegateFlow
 
         }else{
 
-            customNavContainerView.image = #imageLiteral(resourceName: "transparentNavBar")
+            customNavContainerView.image = #imageLiteral(resourceName: "Background")
 
         }
 
@@ -194,7 +217,7 @@ class ConfirmOrderViewController: UIViewController, UICollectionViewDelegateFlow
         }
         backButton.leftAnchor.constraint(equalTo: customNavContainerView.leftAnchor, constant: 15).isActive = true
         backButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        backButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        backButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
         collectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -8).isActive = true
         collectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 8).isActive = true
@@ -218,6 +241,31 @@ class ConfirmOrderViewController: UIViewController, UICollectionViewDelegateFlow
     }
     
     
+    @objc func handleSwipeToDeleteTapped(gesture: UITapGestureRecognizer){
+        
+            let sender = gesture.view
+            
+            let point = sender?.convert((sender?.bounds.origin)!, to: self.collectionView)
+            if let indexPath = self.collectionView.indexPathForItem(at: point!) {
+                
+                if let cell = collectionView.cellForItem(at: indexPath) as? ConfirmOrderCollectionViewCell{
+                    
+                    cell.swipeCloseAllOtherCells(cell: cell)
+                    
+                    
+                    //Remove item and reload collectionview
+                    
+                    
+                }
+                
+                
+            }
+            
+        
+        
+    }
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -227,8 +275,14 @@ class ConfirmOrderViewController: UIViewController, UICollectionViewDelegateFlow
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
-        cell.backgroundColor = .white
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! ConfirmOrderCollectionViewCell
+        cell.backgroundColor = .clear
+        cell.vc = self
+        cell.trashCanImageView.isUserInteractionEnabled = true
+        cell.trashCanImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSwipeToDeleteTapped)))
+        cell.revealButton.isUserInteractionEnabled = true
+        cell.revealButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSwipeToDeleteTapped)))
+        
         return cell
     }
     
@@ -244,6 +298,6 @@ class ConfirmOrderViewController: UIViewController, UICollectionViewDelegateFlow
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width - 16, height: 60)
+        return CGSize(width: view.frame.width, height: 60)
     }
 }

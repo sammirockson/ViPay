@@ -20,9 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: CustomTabBarController())
+        if PFUser.current() == nil {
+            
+            window?.rootViewController = UINavigationController(rootViewController: LogInViewController())
+
+        }else{
+            
+            
+            window?.rootViewController = UINavigationController(rootViewController: CustomTabBarController())
+
+        }
         
         UINavigationBar.appearance().barTintColor = .white
         UINavigationBar.appearance().tintColor = defaultAppColor
@@ -30,8 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = false
         
         UITabBar.appearance().tintColor = RGB.sharedInstance.requiredColor(r: 51, g: 34, b: 211, alpha: 1.0)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: FontNames.OpenSansRegular, size: 8)!], for: .normal)
-         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: FontNames.OpenSansRegular, size: 8)!], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: FontNames.OpenSansSemiBold, size: 8)!], for: .normal)
+         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: FontNames.OpenSansSemiBold, size: 8)!], for: .selected)
         
         
         Network.sharedInstance.initParse()

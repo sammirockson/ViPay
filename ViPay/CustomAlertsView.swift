@@ -25,7 +25,6 @@ class CustomAlerts: NSObject {
     let iconCheckMarkImageView: UIImageView = {
         let v = UIImageView()
         v.translatesAutoresizingMaskIntoConstraints = false
-//        v.image = #imageLiteral(resourceName: "iconCheckmarkCircle")
         v.contentMode = .scaleAspectFit
         return v
     }()
@@ -40,17 +39,15 @@ class CustomAlerts: NSObject {
     let coloredBackground: UIView = {
         let v = UIView()
         v.backgroundColor = RGB.sharedInstance.requiredColor(r: 4, g: 33, b: 75, alpha: 1.0)
-//        v.isHidden = true
         return v
     }()
     
     let messageLabel: UITextView = {
         let label = UITextView()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: FontNames.OpenSansSemiBold, size: 16)
+        label.font = OptimizedFont.font(fontName: FontNames.OpenSansSemiBold, fontSize: 16)
         label.textAlignment = .center
         label.textColor = RGB.sharedInstance.requiredColor(r: 8, g: 26, b: 54, alpha: 1.0)
-//        label.numberOfLines = 0
         return label
     }()
     

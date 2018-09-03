@@ -69,6 +69,13 @@ class FoodDetailsCollectionReusableView: UICollectionReusableView {
         return v
     }()
     
+    let whiteBgView: UIView = {
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = .white
+        return v
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -81,6 +88,7 @@ class FoodDetailsCollectionReusableView: UICollectionReusableView {
     
     func setUpViews(){
         
+        self.addSubview(whiteBgView)
         self.addSubview(backgroundImageView)
         self.addSubview(profileImageView)
         self.addSubview(favRestaurant)
@@ -89,9 +97,13 @@ class FoodDetailsCollectionReusableView: UICollectionReusableView {
         self.addSubview(recentFoodItemsContainerV)
         
         
+        whiteBgView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        whiteBgView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        whiteBgView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
+        whiteBgView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true 
         
         
-        recentFoodItemsContainerV.topAnchor.constraint(equalTo: restoAddressLabel.bottomAnchor, constant: 15).isActive = true
+        recentFoodItemsContainerV.topAnchor.constraint(equalTo: restoAddressLabel.bottomAnchor, constant: 20).isActive = true
         recentFoodItemsContainerV.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -4).isActive = true
         recentFoodItemsContainerV.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 4).isActive = true
         recentFoodItemsContainerV.heightAnchor.constraint(equalToConstant: 250).isActive = true

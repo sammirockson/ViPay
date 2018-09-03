@@ -19,7 +19,7 @@ class RecentFoodItemsContainerView: UIView, UICollectionViewDelegate, UICollecti
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.delegate = self
         cv.dataSource = self
-        cv.backgroundColor = UIColor.white
+        cv.backgroundColor = UIColor.groupTableViewBackground
         return cv
     }()
     

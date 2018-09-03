@@ -20,11 +20,28 @@ class ShoppingHeaderCollectionReusableView: UICollectionReusableView  {
     
     
     
+    lazy var shopItemsCategories: ShopItemsCategories = {
+        let button = ShopItemsCategories()
+        button.backgroundColor = .white
+        button.clipsToBounds = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    lazy var shopAdvertContainerView: ShopAdvertContainerView = {
+        let button = ShopAdvertContainerView()
+        button.backgroundColor = .white
+        button.clipsToBounds = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setUpViews()
+        
+//        let a = FoodCategoriesContainerView()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,10 +52,20 @@ class ShoppingHeaderCollectionReusableView: UICollectionReusableView  {
     func setUpViews(){
         
         self.addSubview(topContainerView)
+        self.addSubview(shopItemsCategories)
+        self.addSubview(shopAdvertContainerView)
+        
+        shopAdvertContainerView.topAnchor.constraint(equalTo: shopItemsCategories.bottomAnchor, constant: 10).isActive = true
+        shopAdvertContainerView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        shopAdvertContainerView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        shopAdvertContainerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        
+        
+        MyConstraints.sharedInstance.pinWithHeight(motherView: self, viewToPin: topContainerView, leftMargin: 0, rightMargin: 0, topMargin: 0, bottomMargin: nil, height: 240, width: nil)
      
-        topContainerView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        topContainerView.heightAnchor.constraint(equalToConstant: 240).isActive = true
-        topContainerView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        topContainerView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        shopItemsCategories.topAnchor.constraint(equalTo: topContainerView.bottomAnchor).isActive = true
+        shopItemsCategories.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        shopItemsCategories.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        shopItemsCategories.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
     }
 }

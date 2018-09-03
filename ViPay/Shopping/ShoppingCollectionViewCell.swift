@@ -15,7 +15,7 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.image = #imageLiteral(resourceName: "binbing")
+        imageView.image = #imageLiteral(resourceName: "love")
         return imageView
     }()
     

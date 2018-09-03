@@ -44,7 +44,6 @@ class FoodCollectionViewCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.image = #imageLiteral(resourceName: "McDon")
         imageView.layer.cornerRadius = 8
-        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -60,10 +59,10 @@ class FoodCollectionViewCell: UICollectionViewCell {
     let restaurantDescriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "Fast food and general restuarants. Gotta write a lotta stuffs so we will see how it'll wrap up"
-        label.font = UIFont(name: FontNames.OpenSansRegular, size: 14)
+        label.font = UIFont(name: FontNames.OpenSansRegular, size: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.clipsToBounds = true
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         return label
     }()
     
@@ -128,12 +127,16 @@ class FoodCollectionViewCell: UICollectionViewCell {
         restAddressLabel.topAnchor.constraint(equalTo: restaurantDescriptionLabel.bottomAnchor, constant: 4).isActive = true
         restAddressLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
+        
+        
         restaurantDescriptionLabel.leftAnchor.constraint(equalTo: restaurantProfileImageView.rightAnchor, constant: 8).isActive = true
         restaurantDescriptionLabel.rightAnchor.constraint(equalTo: openClosedLabel.leftAnchor, constant: -8).isActive = true
         restaurantDescriptionLabel.topAnchor.constraint(equalTo: restaurantNameLabel.bottomAnchor, constant: 4).isActive = true
-        restaurantDescriptionLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        restaurantDescriptionLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         restaurantNameLabel.leftAnchor.constraint(equalTo: restaurantProfileImageView.rightAnchor, constant: 8).isActive = true
+        
+        
         restaurantNameLabel.rightAnchor.constraint(equalTo: openClosedLabel.leftAnchor, constant: -8).isActive = true
         restaurantNameLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
         restaurantNameLabel.topAnchor.constraint(equalTo: restaurantProfileImageView.topAnchor).isActive = true

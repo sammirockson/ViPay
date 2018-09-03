@@ -44,20 +44,18 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
     var foodArray = [Food]()
     
     
-    lazy var shoppingCartLabel: UILabel = {
-        let label = UILabel()
+    lazy var shoppingCartLabel: UIButton = {
+        let label = UIButton()
         label.translatesAutoresizingMaskIntoConstraints = false
         //        button.layer.cornerRadius = 30
+        label.setBackgroundImage(#imageLiteral(resourceName: "backgrounGradientImage"), for: .normal)
         label.clipsToBounds = true
-        label.backgroundColor = defaultAppColor
-        label.text = "Next"
-        label.textColor = .white
-        label.font = UIFont(name: FontNames.OpenSansSemiBold, size: 18)
-        label.numberOfLines = 0
-        label.textAlignment = .center
+        label.setTitle("Next", for: .normal)
+        label.setTitleColor(.white, for: .normal)
+        label.titleLabel?.font = UIFont(name: FontNames.OpenSansSemiBold, size: 18)
         label.isUserInteractionEnabled = true
         label.isEnabled = false
-        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handlePayOrder)))
+        label.addTarget(self, action: #selector(handlePayOrder), for: .touchUpInside)
         return label
     }()
     
@@ -68,7 +66,7 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
         label.clipsToBounds = true
         label.text = "0"
         label.font = UIFont(name: FontNames.OpenSansSemiBold, size: 14)
-        label.textColor = .white
+        label.textColor = defaultAppColor
         label.numberOfLines = 0
         return label
         
@@ -103,7 +101,7 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
     let cartContainerView: UIView = {
         let cartView = UIView()
         cartView.translatesAutoresizingMaskIntoConstraints = false
-        cartView.backgroundColor = .lightGray
+        cartView.backgroundColor = .white
         return cartView
         
     }()
@@ -132,7 +130,7 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
     
     lazy var backButton: UIButton = {
         let btn = UIButton()
-        btn.setBackgroundImage(#imageLiteral(resourceName: "Arrow Left").imageWithTintColor(color: .white), for: .normal)
+        btn.setBackgroundImage(#imageLiteral(resourceName: "iconArrowBack"), for: .normal)
         btn.addTarget(self, action: #selector(handleBackButton), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
@@ -151,9 +149,9 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
         navigationItem.titleView = navTitle
         collectionView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         
-        let leftArrowIcon = #imageLiteral(resourceName: "Arrow Left")
-        let leftBackButton = UIBarButtonItem(image: leftArrowIcon, style: .done, target: self, action: #selector(handleBackButton))
-        navigationItem.setLeftBarButton(leftBackButton, animated: true)
+      //  let leftArrowIcon = #imageLiteral(resourceName: "a")
+      //  let leftBackButton = UIBarButtonItem(image: leftArrowIcon, style: .done, target: self, action: #selector(handleBackButton))
+      //  navigationItem.setLeftBarButton(leftBackButton, animated: true)
 
         
         collectionView.contentInset = UIEdgeInsetsMake(0, 0, 60, 0)
@@ -205,7 +203,7 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
             
         }else{
             
-            customNavContainerView.image = #imageLiteral(resourceName: "transparentNavBar")
+            customNavContainerView.image = #imageLiteral(resourceName: "Background")
             
         }
         
@@ -801,7 +799,7 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
         }
         backButton.leftAnchor.constraint(equalTo: customNavContainerView.leftAnchor, constant: 15).isActive = true
         backButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        backButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        backButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
         customNavContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         customNavContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -1152,14 +1150,14 @@ class FoodKindDetailsCollectionViewController: UIViewController, UICollectionVie
         var headerView: FoodDetailsCollectionReusableView?
         
         headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as? FoodDetailsCollectionReusableView
-        headerView?.backgroundColor = .white
+        headerView?.backgroundColor = UIColor.groupTableViewBackground
         return headerView!
         
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 530)
+        return CGSize(width: view.frame.width, height: 540)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

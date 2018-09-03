@@ -246,7 +246,7 @@ class ShoppingViewController: UIViewController, UICollectionViewDelegate, UIColl
 //        cell.layer.shadowOffset = CGSize(width: 0, height: 0.75)
 //        cell.layer.shadowRadius = 3
 //        cell.layer.shadowOpacity = 0.1
-        
+//        
 //        let numberFormatter = NumberFormatter()
 //        numberFormatter.numberStyle = .decimal
 //        numberFormatter.groupingSize = 3
@@ -276,12 +276,19 @@ class ShoppingViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 500)
+        return CGSize(width: view.frame.width, height: 800)
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (view.frame.width / 2), height: 320)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let detailVC = ShopItemDetailViewController()
+        detailVC.hidesBottomBarWhenPushed = true 
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 
 }
