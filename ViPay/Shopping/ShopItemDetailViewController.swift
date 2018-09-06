@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ShopItemDetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -146,7 +147,7 @@ class ShopItemDetailViewController: UIViewController, UICollectionViewDelegate, 
         return v
     }()
     
-    
+    var product: PFObject!
     private let identifier = "identifier"
     private let headerId = "headerId"
 
@@ -212,6 +213,11 @@ class ShopItemDetailViewController: UIViewController, UICollectionViewDelegate, 
         
     }
     
+
+
+}
+
+extension ShopItemDetailViewController {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -227,14 +233,14 @@ class ShopItemDetailViewController: UIViewController, UICollectionViewDelegate, 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (view.frame.width / 2), height: 320)
-
-//        return CGSize(width: view.frame.width / 2, height: 280)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         var headerView: ShopItemDetailReusableView?
         headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId, for: indexPath) as? ShopItemDetailReusableView
         headerView?.backgroundColor = UIColor.groupTableViewBackground
+        headerView?.showSlideItems(product: self.product)
         return headerView!
     }
     
@@ -243,7 +249,7 @@ class ShopItemDetailViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-       
+        
         if targetContentOffset.pointee.y < 10.0 {
             
             customNavContainerView.image = UIImage()
@@ -258,8 +264,11 @@ class ShopItemDetailViewController: UIViewController, UICollectionViewDelegate, 
         }
         
     }
-
     
+
+}
+
+extension ShopItemDetailViewController{
     
     func setUpViews(){
         
@@ -361,6 +370,4 @@ class ShopItemDetailViewController: UIViewController, UICollectionViewDelegate, 
             
         }
     }
-    
-
 }

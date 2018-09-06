@@ -39,12 +39,14 @@ class FoodViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return v
     }()
     
-    let searchTitleLabel: UILabel = {
+    lazy var searchTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Search for restuarants or food"
         label.textColor = .lightGray
         label.font = UIFont(name: FontNames.OpenSansRegular, size: 12)
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleFoodSearchTapped)))
         return label
     }()
     
@@ -92,6 +94,13 @@ class FoodViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         navigationController?.isNavigationBarHidden = false
         
+    }
+    
+    @objc func handleFoodSearchTapped(){
+        
+        let searchVC = SearchFoodViewController()
+        let nav = UINavigationController(rootViewController: searchVC)
+        self.present(nav, animated: false, completion: nil)
     }
 
     func setUpViews(){

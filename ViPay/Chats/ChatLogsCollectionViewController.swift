@@ -21,17 +21,23 @@ class ChatLogsCollectionViewController: UICollectionViewController {
         return label
     }()
     
+    let customNavContainerView: BaseImageView = {
+        let v = BaseImageView(frame: .zero)
+        v.image = #imageLiteral(resourceName: "Background")
+        v.contentMode = .scaleAspectFill
+        v.clipsToBounds = true
+        v.isUserInteractionEnabled = true
+        return v
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
         navigationItem.titleView = navBarTitleLabel
-        // Register cell classes
         self.collectionView!.register(ChatLogsCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         self.collectionView?.backgroundColor = UIColor.groupTableViewBackground
+        setUpViews()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,10 +47,32 @@ class ChatLogsCollectionViewController: UICollectionViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        UIApplication.shared.statusBarStyle = .default
+        UIApplication.shared.statusBarStyle = .lightContent
+        navigationController?.isNavigationBarHidden = true
+
+    }
+  
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
     }
 
+    func setUpViews(){
+        
+        view.addSubview(customNavContainerView)
+        
+        customNavContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        customNavContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        customNavContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        if UIDevice.current.isIphoneX {
+            customNavContainerView.heightAnchor.constraint(equalToConstant: 90).isActive = true
+        }else{
+            customNavContainerView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+            
+        }
+        
+    }
+    
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

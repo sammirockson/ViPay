@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ShopItemDetailReusableView: UICollectionReusableView {
     
@@ -33,15 +34,14 @@ class ShopItemDetailReusableView: UICollectionReusableView {
         return p
     }()
     
-    let descriptionLabel: UILabel = {
-        let textV = UILabel()
-        textV.numberOfLines = 0
-//        textV.dataDetectorTypes = .all
-//        textV.isScrollEnabled = false
-//        textV.isEditable = false
+    let descriptionLabel: UITextView = {
+        let textV = UITextView()
+        textV.dataDetectorTypes = .all
+        textV.isScrollEnabled = false
+        textV.isEditable = false
         textV.translatesAutoresizingMaskIntoConstraints = false
         textV.font = UIFont(name: FontNames.OpenSansRegular, size: 15)
-        textV.text = "This is some descriptive txt about the product, seller, origin, date of purchase the merchant and all that shit you know what I'm saying This is some descriptive txt about the product, seller, origin, date of purchase the merchant and all that shit you know what I'm saying"
+        textV.text = "hello world"
         return textV
     }()
     
@@ -118,6 +118,45 @@ class ShopItemDetailReusableView: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    func showSlideItems(product: PFObject){
+        
+        var arrayOfStrings = [String]()
+        
+        if let fileOne = product.object(forKey: "fileOne") as? PFFile {
+            arrayOfStrings.append(fileOne.url!)
+        }
+        
+        if let fileTwo = product.object(forKey: "fileTwo") as? PFFile {
+            arrayOfStrings.append(fileTwo.url!)
+        }
+        
+        if let fileThree = product.object(forKey: "fileThree") as? PFFile {
+            arrayOfStrings.append(fileThree.url!)
+        }
+        
+        if let fileFour = product.object(forKey: "fileFour") as? PFFile{
+            arrayOfStrings.append(fileFour.url!)
+        }
+        
+        self.scrollPreviewItemsContainerView.productURLS = arrayOfStrings
+        self.scrollPreviewItemsContainerView.collectionView.reloadData()
+        
+        
+        let price = product.object(forKey: "price") as? String
+        self.priceLabel.text = "Ghc \(price!)"
+        
+        let descrip = product.object(forKey: "description") as? String
+        self.descriptionLabel.text = descrip
+        
+        
+
+    }
+    
+    
+}
+
+extension ShopItemDetailReusableView{
     func setUpviews(){
         
         self.addSubview(scrollPreviewItemsContainerView)
@@ -189,5 +228,4 @@ class ShopItemDetailReusableView: UICollectionReusableView {
         MyConstraints.sharedInstance.pinWithHeight(motherView: self, viewToPin: scrollPreviewItemsContainerView, leftMargin: 0, rightMargin: 0, topMargin: -50, bottomMargin: nil, height: 500, width: nil)
         
     }
-    
 }

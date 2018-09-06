@@ -24,6 +24,8 @@ class ScrollPreviewItemsView: UIView, UICollectionViewDelegateFlowLayout, UIColl
         return cv
     }()
     
+    var productURLS = [String]()
+    
     private let identifier = "identfier"
 
     override init(frame: CGRect) {
@@ -45,12 +47,15 @@ class ScrollPreviewItemsView: UIView, UICollectionViewDelegateFlowLayout, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.productURLS.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! ScrollPreviewItemsCollectionViewCell
-        cell.backgroundColor = .blue
+        cell.backgroundColor = .white
+        let urlString = self.productURLS[indexPath.item]
+        let url = URL(string: urlString)
+        cell.thumbnailImageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
         return cell
     }
     

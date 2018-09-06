@@ -25,19 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        if PFUser.current() == nil {
-            
-            window?.rootViewController = UINavigationController(rootViewController: LogInViewController())
-
-        }else{
-            
-            
+//        if PFUser.current() == nil {
+//
+//            window?.rootViewController = UINavigationController(rootViewController: LogInViewController())
+//
+//        }else{
+//
+        
             window?.rootViewController = UINavigationController(rootViewController: CustomTabBarController())
 
-        }
+//        }
         
         UINavigationBar.appearance().barTintColor = .white
-        UINavigationBar.appearance().tintColor = defaultAppColor
+        UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: FontNames.OpenSansBold, size: 14)!]
         UINavigationBar.appearance().isTranslucent = false
         
@@ -46,16 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: FontNames.OpenSansSemiBold, size: 8)!], for: .selected)
         
         
-        Network.sharedInstance.initParse()
+        Network.initParse()
      
-        
-        let obj = PFObject(className: "TestClass")
-        obj.setObject("Hello world", forKey: "subtitle")
-        obj.saveInBackground { (success, error) in
-            print(error?.localizedDescription as Any)
-            print(success)
-        }
-       
         return true
     }
 

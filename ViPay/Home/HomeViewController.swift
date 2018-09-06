@@ -8,7 +8,13 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, LBXScanViewControllerDelegate {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,PassDataDelegate {
+    
+    
+    func changeTitle(title: String) {
+        
+    }
+    
     
     let customNavContainerView: BaseImageView = {
         let v = BaseImageView(frame: .zero)
@@ -66,9 +72,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        collectionView.contentInset = UIEdgeInsetsMake(8, 0, 0, 0)
-//        collectionView.scrollIndicatorInsets =  UIEdgeInsetsMake(8, 0, 0, 0)
-        
         collectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: identifier)
         collectionView.register(HomeHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerI)
         view.backgroundColor = UIColor(white: 0.9, alpha: 0.9)
@@ -84,9 +87,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
-        
         customNavContainerView.image = #imageLiteral(resourceName: "Background")
-//        customNavContainerView.isHidden = false
         
     }
     
@@ -107,12 +108,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
-//    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>){
-//        if targetContentOffset.memory.y == 0.0 {
-//            println("Reached the Top")
-//        }
-//
-//    }
     
     
     func setUpViews(){
@@ -234,8 +229,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! HomeCollectionViewCell
         cell.backgroundColor = .white
-//        cell.layer.cornerRadius = 24
-//        cell.clipsToBounds = true
         
         cell.layer.cornerRadius = 24
         cell.backgroundColor = .white
@@ -275,75 +268,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     
-    func scanFinished(scanResult: LBXScanResult, error: String?) {
-        
-        UIApplication.shared.statusBarStyle = .lightContent
-
-        
-        if error == nil {
-            
-            if let codedString = scanResult.strScanned {
-                
-//                self.processScannedResults(incomingString: codedString)
-                
-            }
-            
-        }else{
-            
-            
-            DispatchQueue.main.async {
-                
-                CustomAlerts.sharedInstance.showAlert(message: NSLocalizedString("Error occured. Please try again.", comment: ""), image: #imageLiteral(resourceName: "iconWarning"))
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2), execute: {
-                    CustomAlerts.sharedInstance.dismiss()
-                    return
-                })
-                
-                
-            }
-            
-            
-        }
-        
-    }
     
     @objc func handleScan(){
-        
-        
-        var style = LBXScanViewStyle()
-        style.centerUpOffset = 44
-        style.photoframeAngleStyle = LBXScanViewPhotoframeAngleStyle.Inner;
-        style.photoframeLineW = 2
-        style.photoframeAngleW = 18
-        style.photoframeAngleH = 18
-        style.isNeedShowRetangle = false
-        
-        style.anmiationStyle = LBXScanViewAnimationStyle.LineMove
-        style.colorAngle = RGB.sharedInstance.requiredColor(r: 74, g: 144, b: 226, alpha: 1.0)
-        
-        
-        //        style.animationImage = UIImage(named: "CodeScan.bundle/qrcode_Scan_weixin_Line")
-//        let processedImage = UIImage(named: "CodeScan.bundle/qrcode_scan_light_green")?.imageWithTintColor(color: defaultAppColor)
-        style.animationImage = UIImage(named: "CodeScan.bundle/qrcode_scan_part_net")
-        
-        
-        let vc = LBXScanViewController()
-        vc.scanStyle = style
-        vc.scanResultDelegate = self
-        vc.hidesBottomBarWhenPushed = true
-        UIApplication.shared.statusBarStyle = .default
-        self.navigationController?.pushViewController(vc, animated: true)
-        
-//        let scanVC = ScanQRCodeViewController()
-//        scanVC.hidesBottomBarWhenPushed = true
-//        self.navigationController?.pushViewController(scanVC, animated: true)
-        
+        let scanVC = SccanQRCodeViewController()
+        scanVC.passDataDelegate = self
+        let nav = UINavigationController(rootViewController: scanVC)
+        self.present(nav, animated: true, completion: nil)
+
     }
     
     @objc func handleShowMyQRCode(){
-        
-        print("show scan")
-        
         let myqrcodeVC = MyQRCodeViewController()
         myqrcodeVC.hidesBottomBarWhenPushed = true 
         self.navigationController?.pushViewController(myqrcodeVC, animated: true)

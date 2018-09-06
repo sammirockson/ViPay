@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Kingfisher
 
 class ShoppingCollectionViewCell: UICollectionViewCell {
     
@@ -64,6 +66,8 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -73,6 +77,30 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    func processAndDisplay(product: PFObject){
+        
+        let price = product.object(forKey: "price") as? String
+        self.priceLabel.text = "Ghc \(price!)"
+        
+        let fileOne = product.object(forKey: "fileOne") as? PFFile
+        let urlString = fileOne?.url
+        let url = URL(string: urlString!)
+        
+        thumbnailImageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
+        
+        let descrip = product.object(forKey: "description") as? String
+        self.itemDescription.text = descrip
+        
+        
+    }
+    
+ 
+    
+}
+
+extension ShoppingCollectionViewCell {
     
     func setUpViews(){
         
@@ -102,15 +130,14 @@ class ShoppingCollectionViewCell: UICollectionViewCell {
         thumbnailImageView.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
         thumbnailImageView.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
         thumbnailImageView.heightAnchor.constraint(equalToConstant: 210).isActive = true
-       
+        
         
         containerView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -1).isActive = true
         containerView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 1).isActive = true
         containerView.topAnchor.constraint(equalTo: self.topAnchor,constant: 1).isActive = true
         containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4).isActive = true
         
-     
+        
         
     }
-    
 }

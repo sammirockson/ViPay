@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ShoppingViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -50,14 +51,20 @@ class ShoppingViewController: UIViewController, UICollectionViewDelegate, UIColl
         return v
     }()
     
-    let searchTitleLabel: UILabel = {
+    lazy var searchTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Search for products e.g iPhone X, Bag, Ceramics"
         label.textColor = .lightGray
         label.font = UIFont(name: FontNames.OpenSansRegular, size: 12)
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSearchProduct)))
         return label
     }()
+    
+    var products = [PFObject]()
+    var headerView: ShoppingHeaderCollectionReusableView?
+    var scrollIndicatorContainerView: MarketIndicatorContainerView?
     
     let identifier = "identifier"
     private let headerReuseId = "headerReuseId"
@@ -71,9 +78,7 @@ class ShoppingViewController: UIViewController, UICollectionViewDelegate, UIColl
 
         collectionView.register(ShoppingCollectionViewCell.self, forCellWithReuseIdentifier: identifier)
         self.collectionView.register(ShoppingHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseId)
-        
-        
-
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,61 +92,7 @@ class ShoppingViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(handleInfiniteLoop), userInfo: nil, repeats: true)
     }
     
-    func setUpViews(){
-        
-        view.addSubview(customNavContainerView)
-        view.addSubview(collectionView)
-        customNavContainerView.addSubview(searchBarContainerView)
-        
-
-        searchBarContainerView.addSubview(searhcIcon)
-        searchBarContainerView.addSubview(searchTitleLabel)
-        
-        searchTitleLabel.leftAnchor.constraint(equalTo: searhcIcon.rightAnchor, constant: 8).isActive = true
-        searchTitleLabel.rightAnchor.constraint(equalTo: searchBarContainerView.rightAnchor, constant: -8).isActive = true
-        searchTitleLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        searchTitleLabel.centerYAnchor.constraint(equalTo: searhcIcon.centerYAnchor).isActive = true
-        
-        searhcIcon.centerYAnchor.constraint(equalTo: searchBarContainerView.centerYAnchor).isActive = true
-        searhcIcon.leftAnchor.constraint(equalTo: searchBarContainerView.leftAnchor, constant: 10).isActive = true
-        searhcIcon.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        searhcIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        
-        
-        if UIDevice.current.isIphoneX {
-            
-            searchBarContainerView.centerYAnchor.constraint(equalTo: customNavContainerView.centerYAnchor, constant: 15).isActive = true
-            
-            
-        }else{
-            
-            searchBarContainerView.centerYAnchor.constraint(equalTo: customNavContainerView.centerYAnchor, constant: 10).isActive = true
-            
-        }
-        searchBarContainerView.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        searchBarContainerView.rightAnchor.constraint(equalTo: customNavContainerView.rightAnchor, constant: -15).isActive = true
-        searchBarContainerView.leftAnchor.constraint(equalTo: customNavContainerView.leftAnchor, constant: 15).isActive = true
-        
-        collectionView.topAnchor.constraint(equalTo: customNavContainerView.bottomAnchor).isActive = true
-        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
-        customNavContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        customNavContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        customNavContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        if UIDevice.current.isIphoneX {
-            
-            customNavContainerView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-            
-            
-        }else{
-            
-            customNavContainerView.heightAnchor.constraint(equalToConstant: 80).isActive = true
-            
-        }
-        
-    }
+   
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -151,6 +102,38 @@ class ShoppingViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationController?.isNavigationBarHidden = true
         
         self.timer?.fire()
+        self.fetchProducts()
+        
+    }
+    
+    
+    @objc func handleSearchProduct(){
+        
+        let searchVC = UINavigationController(rootViewController: SearchProductsViewController())
+        self.present(searchVC, animated: false, completion: nil)
+        
+        
+    }
+
+    func fetchProducts(){
+        let query = PFQuery(className: "Products")
+        query.cachePolicy = PFCachePolicy.cacheThenNetwork
+        query.findObjectsInBackground { (results, error) in
+            if error == nil {
+                
+                if (results?.count)! > 0 {
+                    
+                    self.products.removeAll(keepingCapacity: true)
+                    self.products = results!
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.collectionView.reloadData()
+                    }
+                }
+                
+            }
+        }
         
     }
     
@@ -212,65 +195,43 @@ class ShoppingViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         navigationController?.isNavigationBarHidden = false
-        
-        
         self.timer?.invalidate()
-        
     }
     
 
     
+   
+
+}
+
+extension ShoppingViewController {
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
         return 1
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! ShoppingCollectionViewCell
         cell.backgroundColor = .clear
-        //        cell.layer.cornerRadius = 24
-        //        cell.clipsToBounds = true
-        
-//        cell.layer.cornerRadius = 24
-//        cell.backgroundColor = .white
-//        cell.layer.borderWidth = 0.2
-//        cell.layer.borderColor = UIColor.white.cgColor
-//        cell.layer.shadowColor = RGB.sharedInstance.requiredColor(r: 0, g: 165, b: 255, alpha: 0.3).cgColor
-//        cell.layer.shadowOffset = CGSize(width: 0, height: 0.75)
-//        cell.layer.shadowRadius = 3
-//        cell.layer.shadowOpacity = 0.1
-//        
-//        let numberFormatter = NumberFormatter()
-//        numberFormatter.numberStyle = .decimal
-//        numberFormatter.groupingSize = 3
-//        let vol = numberFormatter.string(from: num)
-        
+        let product = self.products[indexPath.item]
+        cell.processAndDisplay(product: product)
         return cell
     }
-
     
-    var headerView: ShoppingHeaderCollectionReusableView?
-    var scrollIndicatorContainerView: MarketIndicatorContainerView?
-    
-     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let headerView: ShoppingHeaderCollectionReusableView?
-        
         headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseId, for: indexPath) as? ShoppingHeaderCollectionReusableView
         headerView?.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
-     
+        
         self.headerView = headerView
         headerView?.topContainerView.motherContainer = self
-       self.scrollIndicatorContainerView = headerView?.topContainerView.scrollIndicatorContainerView
-
-        
+        self.scrollIndicatorContainerView = headerView?.topContainerView.scrollIndicatorContainerView
         return headerView!
     }
     
@@ -286,9 +247,70 @@ class ShoppingViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let product = self.products[indexPath.item]
+        
         let detailVC = ShopItemDetailViewController()
-        detailVC.hidesBottomBarWhenPushed = true 
+        detailVC.product = product
+        detailVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(detailVC, animated: true)
     }
+}
 
+extension ShoppingViewController {
+    
+    func setUpViews(){
+        
+        view.addSubview(customNavContainerView)
+        view.addSubview(collectionView)
+        customNavContainerView.addSubview(searchBarContainerView)
+        
+        
+        searchBarContainerView.addSubview(searhcIcon)
+        searchBarContainerView.addSubview(searchTitleLabel)
+        
+        searchTitleLabel.leftAnchor.constraint(equalTo: searhcIcon.rightAnchor, constant: 8).isActive = true
+        searchTitleLabel.rightAnchor.constraint(equalTo: searchBarContainerView.rightAnchor, constant: -8).isActive = true
+        searchTitleLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        searchTitleLabel.centerYAnchor.constraint(equalTo: searhcIcon.centerYAnchor).isActive = true
+        
+        searhcIcon.centerYAnchor.constraint(equalTo: searchBarContainerView.centerYAnchor).isActive = true
+        searhcIcon.leftAnchor.constraint(equalTo: searchBarContainerView.leftAnchor, constant: 10).isActive = true
+        searhcIcon.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        searhcIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
+        
+        if UIDevice.current.isIphoneX {
+            
+            searchBarContainerView.centerYAnchor.constraint(equalTo: customNavContainerView.centerYAnchor, constant: 15).isActive = true
+            
+            
+        }else{
+            
+            searchBarContainerView.centerYAnchor.constraint(equalTo: customNavContainerView.centerYAnchor, constant: 10).isActive = true
+            
+        }
+        searchBarContainerView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        searchBarContainerView.rightAnchor.constraint(equalTo: customNavContainerView.rightAnchor, constant: -15).isActive = true
+        searchBarContainerView.leftAnchor.constraint(equalTo: customNavContainerView.leftAnchor, constant: 15).isActive = true
+        
+        collectionView.topAnchor.constraint(equalTo: customNavContainerView.bottomAnchor).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        customNavContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        customNavContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        customNavContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        if UIDevice.current.isIphoneX {
+            
+            customNavContainerView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+            
+            
+        }else{
+            
+            customNavContainerView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+            
+        }
+        
+    }
 }

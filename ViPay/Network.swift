@@ -13,7 +13,7 @@ class Network: NSObject {
     
     static let sharedInstance = Network()
     
-    func initParse(){
+   static func initParse(){
         
         let config = ParseClientConfiguration {
             $0.applicationId = "ATyPSdKPwkaPOJHl6btDi4jFe0atz9h50wcdPo47"

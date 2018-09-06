@@ -14,7 +14,7 @@ class MyQRCodeViewController: UIViewController {
     let backgroundView: UIImageView = {
         let logingBG = UIImageView()
         logingBG.translatesAutoresizingMaskIntoConstraints = false
-        logingBG.image = #imageLiteral(resourceName: "shanghai")
+        logingBG.image = #imageLiteral(resourceName: "backgrounGradientImage")
         logingBG.contentMode = .scaleAspectFill
         logingBG.clipsToBounds = true
         return logingBG
@@ -24,7 +24,7 @@ class MyQRCodeViewController: UIViewController {
     let smallProfileImageView: UIImageView = {
         let logingBG = UIImageView()
         logingBG.translatesAutoresizingMaskIntoConstraints = false
-        logingBG.image = #imageLiteral(resourceName: "shanghai")
+        logingBG.image = #imageLiteral(resourceName: "backgrounGradientImage")
         logingBG.contentMode = .scaleAspectFill
         logingBG.layer.cornerRadius = 20
         logingBG.clipsToBounds = true
@@ -35,7 +35,7 @@ class MyQRCodeViewController: UIViewController {
     let qrcodeImageView: UIImageView = {
         let logingBG = UIImageView()
         logingBG.translatesAutoresizingMaskIntoConstraints = false
-        logingBG.image = #imageLiteral(resourceName: "shanghai")
+        logingBG.image = #imageLiteral(resourceName: "backgrounGradientImage")
         logingBG.contentMode = .scaleAspectFill
         logingBG.clipsToBounds = true
         logingBG.layer.cornerRadius = 4

@@ -14,6 +14,7 @@ target 'ViPay' do
     pod 'SwiftyJSON'
     pod 'Parse'
     pod 'MarqueeLabel/Swift'
+    pod 'SnapKit'
 
 
   target 'ViPayTests' do
